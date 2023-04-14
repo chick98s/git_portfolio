@@ -1,0 +1,244 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
+
+    <title>포트폴리오</title>
+</head>
+
+<body>
+    <!-- Loading -->
+    <div class="loading">
+        <img src="./image/loading.gif">
+    </div>
+
+    <div id="wrap">
+        <header id="header" class="nav-down">
+            <div class="logo">
+                <a href="http://127.0.0.1:5500/portfolio.html"></a>
+            </div>
+        
+            <!-- nav -->
+            <nav id="nav">
+                <ul class="gnb">
+                    <li><a href="#home" class="item is-active" active-color='#71d69e'>Home</a></li>
+                    <li><a href="#profile" class="item" active-color='#9f7346'>Profile</a></li>
+                    <li><a href="#project" class="item" active-color='#e8b5b4'>Project</a></li>
+                    <li><a href="#contact" class="item" active-color='#9885d7'>Contact</a></li>
+                    
+                    <span class="marker"></span>            
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <!--HOME-->
+            <section id="home">
+                <div class="intro">
+                    <p class="intro_text">WELCOME TO MY</p>
+                    <span class="typing"></span>
+                    <h1>안녕하세요! 웹 퍼블리셔를 꿈꾸는 최소연입니다.</h1>
+                </div>
+        
+                <div class="ball"></div>
+            </section>
+
+            <!--PROFILE-->
+            <section id="profile">
+                <div class="inner">
+                    <h2 class="category-title">PROFILE</h2>
+                    <div class="profile_wrap">
+                        <article>
+                            <figure>
+                                <img src="./image/sy.jpg"/>
+
+                                <figcaption>마우스를 올려주세요</figcaption>
+
+                                <div class="arrow_txt">
+                                    <p>
+                                        안녕하세요! 저는 제가 직접 작성한 코드가 그림처럼 그려지는 것에 
+                                        흥미를 느껴서 꿈을 가지게 되었습니다. 아직 부족한 부분도 있지만
+                                        적극적으로 배우고 끈질기게 도전하여 하루하루 발전하는 <b>웹 퍼블리셔</b>가 되겠습니다.
+                                    </p>
+                                </div>
+                            </figure>
+                        </article>
+
+                        <article class="skill">
+                            <h3>SKILL</h3>
+                            <ul class="skill_list">
+                                <li>
+                                    <h4>HTML</h4>
+                                    <ul>
+                                        <li>웹 접근성 고려</li>
+                                        <li>시멘틱 마크업</li>
+                                        <li>크로스 브라우징</li>                                      
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h4>CSS</h4>
+                                    <ul>
+                                        <li>미디어쿼리, 반응형작업</li>
+                                        <li>부트스트랩</li>
+                                        <li>트랜지션, 애니메이션 활용</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h4>JS</h4>
+                                    <ul>
+                                        <li>자바스크립트 / 제이쿼리</li>
+                                        <li>제이쿼리 UI 플로그인 활용</li>
+                                        <li>동적 코드 작성</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h4>MORE</h4>
+                                    <ul>
+                                        <li>Excel</li>
+                                        <li>Word</li>
+                                        <li>Power Point</li>
+                                    </ul>
+                                </li> 
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- project -->
+            <section id="project">
+                <div class="inner">
+                    <h2 class="category-title">Project</h2>
+
+                    <div class="pj_component pj_div">
+                        <figure class="project_box">
+                            <a class="pj_thumbnail" href="http://step079.dothome.co.kr/ry_hp.html" target="_blank">
+                                <!-- hover시 보여줄 부분 -->
+                                <div class="hv_caption">
+                                    <span class="caption">
+                                        &#8599; 페이지로 가기
+                                    </span>
+                                </div>
+                                <img class="project_img" src="./image/cyworld_img.png" />
+                            </a>
+                        </figure>
+
+                        <div class="pj_content">
+                            <h3>싸이월드</h3>
+                            <ul>
+                                <li>사용언어: css, jquery</li>
+                                <li>설명: 기존 싸이월드 디자인을 참고하여 제작하였습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pj_component pj_div">
+                        <figure class="project_box">
+                            <a class="pj_thumbnail" href="http://step079.dothome.co.kr/song.html" target="_blank">
+                                <!-- hover시 보여줄 부분 -->
+                                <div class="hv_caption">
+                                    <span class="caption">
+                                        &#8599; 페이지로 가기
+                                    </span>
+                                </div>
+                                <img class="project_img" src="./image/song_img.png" />
+                            </a>
+                        </figure>
+
+                        <div class="pj_content">
+                            <h3>MUSIC</h3>
+                            <ul>
+                                <li>사용언어: css, jquery</li>
+                                <li>설명: 반응형 Music 사이트를 제작하였습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pj_component pj_div">
+                        <figure class="project_box">
+                            <a class="pj_thumbnail" href="http://step079.dothome.co.kr/cafe.html" target="_blank">
+                                <!-- hover시 보여줄 부분 -->
+                                <div class="hv_caption">
+                                    <span class="caption">
+                                        &#8599; 페이지로 가기
+                                    </span>
+                                </div>
+                                <img class="project_img" src="./image/cafe_img.png" />
+                            </a>
+                        </figure>
+
+                        <div class="pj_content">
+                            <h3>CAFE</h3>
+                            <ul>
+                                <li>사용언어: css, jquery</li>
+                                <li>설명: 이미지는 직접 합성하여 CAFE 페이지를 제작하였습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pj_component pj_div">
+                        <figure class="project_box">
+                            <a class="pj_thumbnail" href="http://127.0.0.1:5500/portfolio.html" target="_blank">
+                                <!-- hover시 보여줄 부분 -->
+                                <div class="hv_caption">
+                                    <span class="caption">
+                                        &#8599; 페이지로 가기
+                                    </span>
+                                </div>
+                                <img class="project_img" src="./image/pf_img.png" />
+                            </a>
+                        </figure>
+    
+                        <div class="pj_content">
+                            <h3>포트폴리오</h3>
+                            <ul>
+                                <li>사용언어: css, javascript, jquery</li>
+                                <li>설명: 포트폴리오 페이지</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="inner">
+                    <h2 class="category-title">CONTACT</h2>
+                    <article>
+                        <ul class="contact_list">
+                            <li>
+                                <span style="color: #346d4a;">Naver</span>
+                                <p>cgo2046@naver.com</p>
+                            </li>
+                
+                            <li>
+                                <span style="color: firebrick;">Gmail</span>
+                                <p>choesoyeon1@gmail.com</p>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="ball"></div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer id="footer">
+            <p>개인 포트폴리오용으로 제작되었습니다.</p>
+            <p>&#169; 2023 CHOI SOYEON. All Rihths Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/portfolio.js"></script>
+</body>
+
+</html>
