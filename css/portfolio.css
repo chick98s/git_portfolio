@@ -351,6 +351,7 @@ figcaption {
 
 #project {
     background: #e8b5b4;
+    height: 215vh;
 }
 
 .category-title {
@@ -376,6 +377,7 @@ figcaption {
 
 .pj_component {
     width: 1200px;
+    height: 350px;
     background: rgba(238, 233, 233, 0.8);
     border: 1px solid white;
     border-radius: 16px;
@@ -385,15 +387,17 @@ figcaption {
 
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
-}
 
-.pj_div {
-    height: 350px;
     opacity: 1;
 }
 
-.pj_div:not(:last-child) {
+.pj_component:not(:last-child) {
     margin-bottom: 55px;
+}
+
+.pj_component:last-child {
+    margin-bottom: 20px;
+    border: 1px solid red;
 }
 
 .project_box {
