@@ -395,11 +395,6 @@ figcaption {
     margin-bottom: 55px;
 }
 
-.pj_component:last-child {
-    margin-bottom: 20px;
-    border: 1px solid red;
-}
-
 .project_box {
     float: left;
 }
