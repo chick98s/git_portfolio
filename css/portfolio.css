@@ -351,6 +351,7 @@ figcaption {
 
 #project {
     background: #e8b5b4;
+    background-image: url(../image/bg_flower.png);
     height: 215vh;
 }
 
