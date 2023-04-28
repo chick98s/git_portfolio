@@ -528,7 +528,7 @@ figcaption {
 }
 
 /* 768px보다 작아질 경우 */
-@media all and (min-width:768px) {
+@media all and (max-width:768px) {
     #home,
     #profile,
     #project {
