@@ -529,13 +529,7 @@ figcaption {
 
 /* 768px보다 작아질 경우 */
 @media only screen and (max-width:320px) {
-    #home,
-    #profile,
-    #project {
-        width: 1200px;
-    }
-
-    #footer {
-        width: 1200px;
+    #home {
+        width: 500px;
     }
 }
