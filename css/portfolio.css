@@ -527,9 +527,9 @@ figcaption {
     margin: 0 auto;
 }
 
-/* 320px 작아질 경우 */
-@media screen and (max-width: 320px) {
-    html {
+/* 360px 작아질 경우 */
+@media screen and (max-width: 360px) {
+    body {
         font-size: 9px;
     }
 
