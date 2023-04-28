@@ -527,9 +527,10 @@ figcaption {
     margin: 0 auto;
 }
 
-/* 768px보다 작아질 경우 */
-@media only screen and (max-width:320px) {
+/* 320px 작아질 경우 */
+@media only screen and (max-width: 320px) {
     #home {
-        width: 500px;
+        width: 100%;
+        background-color: #fff;
     }
 }
