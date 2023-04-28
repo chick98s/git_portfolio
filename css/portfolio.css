@@ -526,3 +526,12 @@ figcaption {
     display: block;
     margin: 0 auto;
 }
+
+/* 768px보다 작아질 경우 */
+@media all and (max-width:768px) {
+    #home,
+    #profile,
+    #project {
+        width: 100%;
+    }
+}
