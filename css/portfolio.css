@@ -528,7 +528,11 @@ figcaption {
 }
 
 /* 320px 작아질 경우 */
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
+    body {
+        background-color: red;
+    }
+
     #home {
         width: 100%;
         background-color: #fff;
