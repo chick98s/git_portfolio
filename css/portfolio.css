@@ -529,15 +529,27 @@ figcaption {
 
 /* 320px 작아질 경우 */
 @media screen and (max-width: 320px) {
-    body {
-        background-color: red;
-    }
-
     #home {
         width: 100%;
         background-color: #fff;
     }
 
+    .pj_component {
+        width: 200px;
+        height: 350px;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid white;
+        border-radius: 16px;
+    
+        -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
+    
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+    
+        opacity: 1;
+    }
+    
     #footer {
         background-color: red;
     }
