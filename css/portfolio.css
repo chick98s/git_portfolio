@@ -612,10 +612,6 @@ figcaption {
         display: none;
     }
 
-    #project {
-        height: 285vh;
-    }
-
     .category-title {
         width: 15%;
         margin: 0 10rem;
