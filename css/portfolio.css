@@ -42,7 +42,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: white;
     z-index: 999;
     opacity: 1;
     transition: 0.5s ease;
@@ -51,7 +51,7 @@ a {
 .loading img {
     position: absolute;
     top: 45%;
-    left: 45%;
+    left: 25%;
     width: 150px;
     height: 150px;
 }
@@ -563,8 +563,12 @@ figcaption {
 
 /* 작아질 경우 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
-    .loading {
-        left: 5%;
+    .loading img {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        width: 150px;
+        height: 150px;
     }
 
     #home {
