@@ -564,11 +564,8 @@ figcaption {
 /* 작아질 경우 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
     .loading img {
-        position: absolute;
         top: 45%;
         left: 15%;
-        width: 150px;
-        height: 150px;
     }
 
     #home {
@@ -588,7 +585,7 @@ figcaption {
     }
 
     .pj_component {
-        width: 100%;
+        width: 25%;
         height: 50vw;
     }
     
