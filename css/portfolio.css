@@ -588,6 +588,18 @@ figcaption {
         width: 25%;
         height: 50vw;
     }
+
+    .pj_thumbnail {
+        display: block;
+        position: relative;
+        border-radius: 10px;
+        width: 25rem;
+        height: 15.625rem;
+        margin: 3rem;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+        overflow: hidden;
+    }
     
     .nav_toggle {
         width: 100px;
