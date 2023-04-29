@@ -563,6 +563,10 @@ figcaption {
 
 /* 작아질 경우 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
+    .loading {
+        left: 5%;
+    }
+
     #home {
         min-height: auto;
     }
@@ -575,6 +579,11 @@ figcaption {
         font-size: 2rem;
     }
 
+    .pj_component {
+        width: 100%;
+        height: 50vw;
+    }
+    
     .nav_toggle {
         width: 100px;
         display: block;
