@@ -565,7 +565,7 @@ figcaption {
 @media screen and (min-width: 320px) and (max-width: 800px) {
     .loading img {
         top: 45%;
-        left: 27%;
+        left: 30%;
     }
 
     #nav {
@@ -617,8 +617,8 @@ figcaption {
     }
 
     .pj_component {
-        width: 25%;
-        height: 50vw;
+        width: 35%;
+        height: 60vw;
     }
 
     .pj_thumbnail {
