@@ -565,7 +565,7 @@ figcaption {
 @media screen and (min-width: 320px) and (max-width: 800px) {
     .loading img {
         top: 45%;
-        left: 25%;
+        left: 27%;
     }
 
     #nav {
@@ -613,7 +613,7 @@ figcaption {
     }
 
     .category-title {
-        padding: 5rem 0;
+        padding: 1rem 0;
     }
 
     .pj_component {
