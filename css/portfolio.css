@@ -552,7 +552,11 @@ figcaption {
 
 /* 작아질 경우 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
-   body {
-    background-color: red;
+   #home {
+    width: 100%;
+   }
+
+   .nav_toggle {
+    display: block;
    }
 }
