@@ -92,3 +92,27 @@ items.forEach(item => {
   item.addEventListener('click', (e) => {handleIndicator(e.target)});
   item.classList.contains('is-active') && handleIndicator(item);
 });
+
+//jquery
+$(document).ready(function(){
+
+  var toggle_nav = $('.nav_toggle');
+  toggle_nav.on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('open_nav_toggle');
+  });
+
+
+  $('.skill1').easyPieChart({
+    barColor: "#3C486B",
+    scaleColor: false,
+    lineCap: "round",
+    lineWidth: 10,
+    size: 100,
+    onStart: $.noop,
+    onStop: $.noop,
+    onStep: function (from, to, percent) {
+      $(this.el).find(".percent").text(Math.round(percent));
+    },
+  });
+});
