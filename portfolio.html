@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet"type="text/css" href="/path/to/jquery.easy-pie-chart.css">
+
     <link rel="stylesheet" href="./css/portfolio.css" />
 
     <title>포트폴리오</title>
@@ -20,14 +22,21 @@
     <div id="wrap">
         <header id="header" class="nav-down">
             <div class="logo"></div>
-        
+            
+            <!-- 토글 버튼 -->
+            <button class="nav_toggle">
+                <div class="nav_icon">
+                    <span></span><span></span><span></span>
+                </div>
+            </button>
+            
             <!-- nav -->
             <nav id="nav">
                 <ul class="gnb">
-                    <li><a href="#home" class="item is-active" active-color='#9885d7'>Home</a></li>
-                    <li><a href="#profile" class="item" active-color='#fd3'>Profile</a></li>
-                    <li><a href="#project" class="item" active-color='#e8b5b4'>Project</a></li>
-                    <li><a href="#contact" class="item" active-color='#141414'>Contact</a></li>
+                    <li><a href="#home" class="item is-active" active-color='#A27944'>Home</a></li>
+                    <li><a href="#profile" class="item" active-color='#A27944'>Profile</a></li>
+                    <li><a href="#skill" class="item" active-color='#E6756A'>Skill</a></li>
+                    <li><a href="#project" class="item" active-color='#FFD577'>Project</a></li>
                     
                     <span class="marker"></span>            
                 </ul>
@@ -55,7 +64,7 @@
                             <figure>
                                 <img src="./image/sy.jpg"/>
 
-                                <figcaption>마우스를 올려주세요</figcaption>
+                                <figcaption>▼</figcaption>
 
                                 <div class="arrow_txt">
                                     <p>
@@ -68,7 +77,7 @@
                         </article>
 
                         <article class="skill">
-                            <h3>SKILL</h3>
+                            <h3>About Me</h3>
                             <ul class="skill_list">
                                 <li>
                                     <h4>HTML</h4>
@@ -98,7 +107,7 @@
                                 </li>
 
                                 <li>
-                                    <h4>MORE</h4>
+                                    <h4>ETC</h4>
                                     <ul>
                                         <li>Excel</li>
                                         <li>Word</li>
@@ -108,6 +117,42 @@
                             </ul>
                         </article>
                     </div>
+                </div>
+            </section>
+
+            <!-- skill -->
+            <section id="skill">
+                <div class="inner">
+                    <h2 class="category-title">SKILL</h2>
+                    <ul class="c_list">
+                        <li class="skill1">
+                            <span class="chart" data-percent="95">
+                                <span class="percent">95</span>
+                            </span>
+                            <span class="txt">HTML</span>
+                        </li>
+            
+                        <li class="skill2">
+                            <span class="chart" data-percent="95">
+                                <span class="percent">95</span>
+                            </span>
+                            <span class="txt">CSS</span>
+                        </li>
+
+                        <li class="skill3">
+                            <span class="chart" data-percent="88">
+                                <span class="percent">88</span>
+                            </span>
+                            <span class="txt">JAVASCRIPT</span>
+                        </li>
+
+                        <li class="skill4">
+                            <span class="chart" data-percent="90">
+                                <span class="percent">90</span>
+                            </span>
+                            <span class="txt">JQUERY</span>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -205,27 +250,6 @@
                     </div>
                 </div>
             </section>
-
-            <section id="contact">
-                <div class="inner">
-                    <h2 class="category-title">CONTACT</h2>
-                    <article>
-                        <ul class="contact_list">
-                            <li>
-                                <span style="color: #346d4a;">Naver:</span>
-                                <p>cgo2046@naver.com</p>
-                            </li>
-                
-                            <li>
-                                <span style="color: firebrick;">Gmail:</span>
-                                <p>choesoyeon1@gmail.com</p>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
-
-                <div class="ball"></div>
-            </section>
         </main>
 
         <!-- footer -->
@@ -236,6 +260,8 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/path/to/jquery.easy-pie-chart.js"></script>
+
     <script src="./js/portfolio.js"></script>
 </body>
 
