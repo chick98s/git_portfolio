@@ -1,11 +1,6 @@
 @charset "UTF-8";
-
-@font-face {
-    font-family: "NEXON Lv2 Gothic Bold";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&family=Sigmar&display=swap');
 
 * {
     margin: 0;
@@ -16,7 +11,7 @@
 
 body {
     line-height: 1.5;
-    font-family: "NEXON Lv2 Gothic", sans-serif;
+    font-family: 'Sigmar', cursive;
 }
 
 body::-webkit-scrollbar {
@@ -24,7 +19,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #444;
+    background-color: #E6756A;
 }
 
 body::-webkit-scrollbar-track {
@@ -90,6 +85,10 @@ a {
     background-repeat: no-repeat;
 }
 
+.nav_toggle {
+    display: none;
+}
+
 .nav-up {
     top: -110px;
 }
@@ -143,47 +142,6 @@ a {
     transition: .3s;
 } 
 
-/* 타이핑 */
-.intro {
-    position: relative;
-    width: 100%;
-    top: 300px;
-    left: 20%;
-    text-align: left;
-    color:#ffffff;
-}
-
-.intro_text {
-    font-size: 6rem;
-    text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
-}
-
-/* 타이핑 */
-.typing {
-    font-size: 6rem;
-    animation: cursor .3s infinite;
-    text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
-    -webkit-animation: cursor .3s infinite;
-}
-
-@keyframes cursor {
-    0% {border-right: 2px solid #f20}
-    50% {border-right: 2px solid #000}
-    100% {border-right: 2px solid #f80}
-}
-
-.intro h1 {
-    font-size: 1.5rem;
-}
-
-/* 원 애니메이션 */
-.ball {
-	width: 800px;
-	height: 800px;
-	border-radius: 50%;
-    background-color: #fff;
-}
-
 /* section */
 #home,
 #profile {
@@ -192,14 +150,50 @@ a {
     min-height: 1000px;
 }
 
-#home, #contact {
-    color: #fff;
-    background-color: #141414;
-}
-
 #home {
     overflow: hidden;
     z-index: 200;
+    background-color: #FFD577;
+}
+
+/* 타이핑 */
+.intro {
+    position: relative;
+    width: 100%;
+    top: 300px;
+    left: 20%;
+    text-align: left;
+    color: #A27944;
+}
+
+.intro_text {
+    font-size: 6rem;
+}
+
+/* 타이핑 */
+.typing {
+    font-size: 6rem;
+    animation: cursor .5s infinite;
+    -webkit-animation: cursor .5s infinite;
+}
+
+@keyframes cursor {
+    0% {border-right: 2px solid #A27944}
+    50% {border-right: 2px solid #ffffff}
+    100% {border-right: 2px solid #A27944}
+}
+
+.intro h1 {
+    font-size: 1.5rem;
+    font-family: 'Noto Serif KR', serif;
+}
+
+/* 원 애니메이션 */
+.ball {
+	width: 800px;
+	height: 800px;
+	border-radius: 50%;
+    background-color: #000;
 }
 
 #home .ball {
@@ -226,8 +220,7 @@ a {
 }
 
 #profile {
-    background: url(../image/flower.gif);
-    border: 0;
+    background-color: #A27944;
 }
 
 #profile .profile_wrap {
@@ -252,11 +245,12 @@ a {
     position: relative;
     width: 500px;
     height: 150px;
+    font-family: 'Noto Serif KR', serif;
 }
 
 .arrow_txt p {
     position: absolute;
-    background-color: #ededed;
+    background-color: #FFD577;
     word-wrap:break-word;
     width: 500px;
     height: 150px;
@@ -273,7 +267,7 @@ a {
 .arrow_txt p::after {
     content: '';
     position: absolute;
-    background-color: #ededed;
+    background-color: #FFD577;
     width: 10px;
     height: 10px;
     transform: rotate(45deg) translateX(-50%);
@@ -298,13 +292,13 @@ figcaption {
 #profile .skill {
     padding-top: 110px;
     padding-left: 150px;
+    font-family: 'Noto Serif KR', serif;
 }
 
 #profile .skill h3 {
-    color: #141414;
+    color: #FFD577;
     font-size: 4rem;
     position: relative;
-    text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
 }
 
 #profile .skill_list {
@@ -312,7 +306,7 @@ figcaption {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding-top: 100px;
-    color: #fff;
+    color: #000;
 }
 
 #profile .skill_list > li {
@@ -322,11 +316,10 @@ figcaption {
 }
 
 #profile .skill_list > li h4 {
-    color: #141414;
-	font-size: 2.4rem;
+    color: #FFD577;
+	font-size: 2.6rem;
 	padding-bottom: 10px;
 	position: relative;
-    text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
 }
 
 /* section 
@@ -341,13 +334,88 @@ figcaption {
 }
 */
 
-#project {
-    background: rgba(0, 0, 0, 0.07);
-    height: 215vh;
+#skill {
+    height: 80vh;
+    background-color: #524653;
 }
 
-#project h2 {
-    color: #000;
+#skill .c_list::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+#skill .c_list li {
+    position: relative;
+    top: 120px;
+    float: left;
+    font-size: 2.5rem;
+    width: 25%;
+    color: #141414;
+    /*opacity: 0;*/
+}
+
+#skill .chart {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: table;
+    font-family: 'Noto Serif KR', serif;
+}
+
+#skill .c_list .percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+#skill .c_list .percent::after {
+    content: '%';
+}
+
+#skill canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#skill .c_list .txt {
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#skill.on .c_list li {
+    opacity: 1;
+    top: 0;
+}
+
+#skill.on .skill1 {
+    -webkit-transition: opacity 0.4s 0.6s, top 0.4s 0.6s; 
+    transition: opacity 0.4s 0.6s, top 0.4s 0.6s;
+}
+
+#skill.on .skill2 {
+    -webkit-transition: opacity 0.4s 0.8s, top 0.4s 0.8s; 
+    transition: opacity 0.4s 0.8s, top 0.4s 0.8s;
+}
+
+#skill.on .skill3 {
+    -webkit-transition: opacity 0.4s 1.0s, top 0.4s 1.0s;  
+    transition: opacity 0.4s 1.0s, top 0.4s 1.0s;
+}
+
+#skill.on .skill4 {
+    -webkit-transition: opacity 0.4s 1.2s, top 0.4s 1.2s; 
+    transition: opacity 0.4s 1.2s, top 0.4s 1.2s;
+}
+
+#project {
+    background-color: #FFD577;
+    height: 215vh;
 }
 
 .category-title {
@@ -357,7 +425,8 @@ figcaption {
     font-size: 2em;
     line-height: 1.6;
     margin-bottom: 54px;
-    color: #fff;
+    color: #FFD577;
+    -webkit-text-stroke: 2px black;
 }
 
 .category-title::after {
@@ -369,14 +438,14 @@ figcaption {
     display: block;
     width: 34px;
     height: 4px;
-    background-color: #9885d7;
+    background-color: #E6756A;
 }
 
 .pj_component {
     width: 1200px;
     height: 350px;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.78);
+    border: 1px solid #fff;
     border-radius: 16px;
 
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
@@ -419,14 +488,16 @@ figcaption {
 
 .hv_caption {
     position: absolute;
-    background-color: rgba(230, 176, 176, 0.95); 
+    background-color: rgba(204, 57, 52, 0.8); 
+
     width: 100%;
     height: 100%;
-    color: white;
+    color: #FFD577;
     opacity: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     vertical-align: middle;
+    font-family: 'Noto Serif KR', serif;
 }
 
 .hv_caption > .caption {
@@ -446,7 +517,8 @@ figcaption {
     height: 200px;
     -webkit-transform: translate(72%, 42%);
     transform: translate(72%, 42%);
-    color: #141414;
+    color: #FFD577;
+    font-family: 'Noto Serif KR', serif;
 }
 
 .pj_content h3 {
@@ -461,64 +533,15 @@ figcaption {
     line-height: 1.5;
 }
 
-#contact {
-    overflow: hidden;
-    height: 80vh;
-}
-
-#contact article {
-    position: relative;
-    display: inline-block;
-    top: 150px;
-    left: 75%;
-}
-
-#contact .contact_list li {
-    width: auto;
-    line-height: 80px;
-}
-
-.contact_list span {
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-
-.contact_list p {
-    display: inline;
-    font-size: 1.6rem;
-    margin: 0 10px;
-}
-
-#contact .ball {
-	opacity: 0.07;
-	position: relative;
-    top: 20px;
-	animation: ct_ball 3s linear infinite alternate;
-}
-
-@keyframes ct_ball {
-	0% {
-		right: 350px;
-		bottom: -180px;
-	}
-	50% {
-		right: 320px;
-		bottom: -200px;
-	}
-	100% {
-		right: 310px;
-		bottom: -230px;
-	}
-}
-
 /* FOOTER */
 #footer {
     width: 100%;
     height: 3.2rem;
     font-size: 1rem;
     text-align: center; 
-    background: #141414;
-    color: #d9d9d9;
+    background: #A27944;
+    color: #FFD577;
+    font-family: 'Noto Serif KR', serif;
     z-index: 201;
 }
 
@@ -527,42 +550,81 @@ figcaption {
     margin: 0 auto;
 }
 
-/* 360px 작아질 경우 */
-@media screen and (max-width: 360px) {
-    body {
-        font-size: 9px;
+/* 작아질 경우 */
+@media (max-width: 579px) {
+    .nav_toggle .nav_icon { 
+        display: block;
+        top: 1.7em;
+        background-color: transparent;
+        color: red;
     }
 
     #home {
-        width: 100%;
-        min-height: 650px;
+        min-height: auto;
     }
 
+    .intro {
+        top: 250px;
+        left: 5%;
+    }    
+
     .intro_text {
-        font-size: 2.3rem;
+        font-size: 3rem;
     }
 
     .typing {
-        font-size: 2.3rem;
+        font-size: 3rem;
     }
 
     .intro h1 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
-
+    
+    /* 원 애니메이션 */
+    .ball {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+    
+    @keyframes hm_ball {
+        0% {
+            right: -220px;
+            bottom: -120px;
+        }
+        50% {
+            right: -260px;
+            bottom: -135px;
+        }
+        100% {
+            right: -300px;
+            bottom: -150px;
+        }
+    }
+    
     #profile {
         width: 100%;
         min-height: 650px;
     }
 
     #profile article figure img {
-        width: 300px;
-        height: 300px;
+        display: none;
+    }
+
+    #project {
+        height: 285vh;
+    }
+
+    .category-title {
+        width: 15%;
+        margin: 0 10rem;
+        display: table;
     }
 
     .pj_component {
-        width: 30rem;
-        height: 350px;
+        width: 40.3%;
+        margin: 20px 0;
     }
 
     .pj_thumbnail {
@@ -573,7 +635,13 @@ figcaption {
         display: none;
     }
 
+    .hv_caption {
+        font-size: 1.3rem;
+    }
+
     #footer {
-        background-color: red;
+        position: relative;
+        display: table;
+        padding: 10px 0;
     }
 }
