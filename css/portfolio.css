@@ -604,12 +604,17 @@ figcaption {
         min-height: auto;
     }
 
+    .intro {
+        top: 500px;
+        left: 0;
+    }
+
     .intro_text {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .typing {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .category-title {
@@ -622,7 +627,7 @@ figcaption {
     }
 
     .pj_thumbnail {
-        width: 15rem;
+        width: 12rem;
         height: 15.625rem;
         margin: 3rem;
 
