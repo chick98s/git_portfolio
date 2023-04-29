@@ -551,7 +551,7 @@ figcaption {
 }
 
 /* 작아질 경우 */
-@media all and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 800px) {
    body {
     background-color: red;
    }
