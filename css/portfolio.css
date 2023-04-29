@@ -565,7 +565,7 @@ figcaption {
 @media screen and (min-width: 320px) and (max-width: 800px) {
     .loading img {
         top: 45%;
-        left: 20%;
+        left: 22%;
     }
 
     #nav {
@@ -588,15 +588,15 @@ figcaption {
         transition: all .3s ease-in-out;
     }
 
-    .nav_toggle .nav_toggle span:nth-child(1) {
+    .nav_toggle .nav_toggle span:nth-of-type(1) {
         top: 0;
     }
 
-    .nav_toggle .nav_toggle span:nth-child(2) {
+    .nav_toggle .nav_toggle span:nth-of-type(2) {
         top: 45%;
     }
 
-    .nav_toggle .nav_toggle span:nth-child(3) {
+    .nav_toggle .nav_toggle span:nth-of-type(3) {
         bottom: 0;
     }
 
