@@ -50,8 +50,8 @@ a {
 
 .loading img {
     position: absolute;
-    top: 45%;
-    left: 25%;
+    top: 40%;
+    left: 45%;
     width: 150px;
     height: 150px;
 }
@@ -566,7 +566,7 @@ figcaption {
     .loading img {
         position: absolute;
         top: 45%;
-        left: 45%;
+        left: 15%;
         width: 150px;
         height: 150px;
     }
@@ -581,6 +581,10 @@ figcaption {
 
     .typing {
         font-size: 2rem;
+    }
+
+    .category-title {
+        padding: 5rem 0;
     }
 
     .pj_component {
