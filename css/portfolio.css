@@ -635,6 +635,11 @@ figcaption {
         text-align: center;
     }
 
+    .arrow_txt {
+        width: 300px;
+        text-size-adjust: auto;
+    }
+
     .category-title {
         width: 15%;
         left: -50px;
