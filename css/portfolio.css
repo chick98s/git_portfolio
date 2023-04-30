@@ -612,7 +612,7 @@ figcaption {
 
     .intro {
         top: 300px;
-        margin: 0 2em;
+        margin: 0 2px;
     }
 
     .intro_text {
@@ -671,10 +671,15 @@ figcaption {
         height: 200px;
         top: 45%;
         right: 20%;
+        font-size: 1.2rem;
         text-size-adjust: auto;
     }
 
     #skill {
         display: none;
+    }
+
+    #footer {
+        bottom: 0;
     }
 }
