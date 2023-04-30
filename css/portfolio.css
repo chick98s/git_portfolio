@@ -574,7 +574,7 @@ figcaption {
 
     .nav_toggle {
         position: relative;
-        width: 50px;
+        width: 40px;
         right: 0;
         display: block;
     }
@@ -666,8 +666,6 @@ figcaption {
     
     #profile .skill h3 {
         font-size: 2rem;
-        top: 50px;
-        left: 10px;
     }
     
     #profile .skill_list > li {
