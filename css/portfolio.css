@@ -660,8 +660,8 @@ figcaption {
     }
 
     #profile .skill {
-        padding-top: 350px;
-        padding-right: 350px;
+        padding-top: 550px;
+        padding-right: 550px;
     }
     
     #profile .skill h3 {
@@ -715,5 +715,6 @@ figcaption {
         position: relative;
         bottom: -250px;
         z-index: 1;
+        height: 2.5rem;
     }
 }
