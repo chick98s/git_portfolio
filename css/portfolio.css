@@ -648,7 +648,7 @@ figcaption {
 
     .pj_component {
         width: 383px;
-        height: 150vw;
+        height: 120vw;
     }
 
     .hv_caption {
@@ -657,6 +657,7 @@ figcaption {
     
         width: 100%;
         height: 100%;
+        margin: 0 2%;
         color: #FFD577;
     }    
 
