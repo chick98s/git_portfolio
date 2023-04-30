@@ -610,7 +610,7 @@ figcaption {
     }
 
     .intro_text {
-        margin: 50px 0;
+        margin: 10px 0;
         font-size: 3.2rem;
     }
 
@@ -623,7 +623,7 @@ figcaption {
     }
 
     .pj_component {
-        width: 35%;
+        width: 25%;
         height: 60vw;
     }
 
