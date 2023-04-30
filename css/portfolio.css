@@ -660,16 +660,18 @@ figcaption {
         color: #FFD577;
     }    
 
+    .pj_thumbnail {
+        width: 20rem;
+        margin: 10px 20px;
+    }
+
     .pj_content {
         position: absolute;
         width: 300px;
         height: 200px;
+        top: 30px;
+        left: 0;
         text-size-adjust: auto;
-    }
-
-    .pj_thumbnail {
-        width: 20rem;
-        margin: 0 10px;
     }
 
     #skill {
