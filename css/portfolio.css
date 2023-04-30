@@ -574,9 +574,10 @@ figcaption {
 
     .nav_toggle {
         position: relative;
-        width: 40px;
-        right: 0;
+        width: 38px;
+        float: right;
         display: block;
+        background: none;
     }
 
     /* 햄버거 메뉴 */
@@ -688,7 +689,7 @@ figcaption {
 
     .pj_component {
         width: 384px;
-        height: 120vw;
+        height: 140vw;
         margin: 3% 0;
     }
   
