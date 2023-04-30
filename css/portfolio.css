@@ -624,12 +624,13 @@ figcaption {
     }
 
     .pj_component{
-        width: 300px;
+        width: 400px;
         height: 100vw;
     }
 
     .pj_thumbnail {
-        width: 20rem;
+        width: 15rem;
+        
     }
     
     .nav_toggle {
