@@ -646,6 +646,17 @@ figcaption {
         text-size-adjust: auto;
     }
 
+    figcaption {
+        position: relative;
+        top: -10px;
+        left: 50px;
+        border-radius: 15px;
+        width: 20%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        background: rgba(0, 0, 0, 0.8);
+    }
+
     #profile .skill h3 {
         font-size: 2rem;
         top: 50px;
@@ -689,7 +700,6 @@ figcaption {
         margin: 0 -45%;
         font-size: 0.8rem;
         text-size-adjust: auto;
-        border: 1px solid blue;
     }
 
     #skill {
@@ -698,6 +708,6 @@ figcaption {
 
     #footer {
         position: relative;
-        bottom: -20px;
+        bottom: -50%;
     }
 }
