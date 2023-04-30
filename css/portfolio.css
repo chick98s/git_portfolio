@@ -645,23 +645,15 @@ figcaption {
         left: 10px;
     }
     
-    #profile .skill_list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-top: 100px;
-        color: #000;
-    }
-    
-    #profile .skill_list>li {
+    #profile .skill_list > li {
         width: 250px;
-        padding-bottom: 60px;
+        padding-bottom: 20px;
         position: relative;
     }
     
-    #profile .skill_list>li h4 {
+    #profile .skill_list > li h4 {
         color: #FFD577;
-        font-size: 2.6rem;
+        font-size: 1.5rem;
         padding-bottom: 10px;
         position: relative;
     }
