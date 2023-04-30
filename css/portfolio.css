@@ -641,7 +641,7 @@ figcaption {
 
     .arrow_txt p {
         width: 310px;
-        height: 200px;
+        height: 180px;
         font-size: 1rem;
         text-size-adjust: auto;
     }
@@ -657,6 +657,11 @@ figcaption {
         background: rgba(0, 0, 0, 0.8);
     }
 
+    #profile .skill {
+        padding-top: 150px;
+        padding-left: 15px;
+    }
+    
     #profile .skill h3 {
         font-size: 2rem;
         top: 50px;
