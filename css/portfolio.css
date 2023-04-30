@@ -582,6 +582,7 @@ figcaption {
         float: right;
         display: block;
         border: none;
+        background: none;
     }
 
     /* 햄버거 메뉴 */
@@ -655,8 +656,8 @@ figcaption {
 
     figcaption {
         position: relative;
-        top: -10px;
-        left: 50px;
+        top: 50px;
+        left: 80px;
         border-radius: 15px;
         width: 20%;
         text-align: center;
@@ -719,12 +720,5 @@ figcaption {
 
     #skill .c_list {
         display: none;
-    }
-
-    #footer {
-        position: relative;
-        z-index: 1;
-        height: 5rem;
-        bottom: 0;
     }
 }
