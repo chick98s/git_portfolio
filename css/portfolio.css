@@ -696,7 +696,7 @@ figcaption {
     }
 
     #footer {
-        position: absolute;
+        position: relative;
         bottom: 0;
     }
 }
