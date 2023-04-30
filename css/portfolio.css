@@ -624,15 +624,12 @@ figcaption {
     }
 
     .pj_component{
-        width: 500px;
+        width: 300px;
         height: 100vw;
     }
 
     .pj_thumbnail {
-        width: 12rem;
-        height: 15.625rem;
-        margin: 3rem;
-
+        width: 20rem;
     }
     
     .nav_toggle {
