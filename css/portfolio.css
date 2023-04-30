@@ -612,7 +612,7 @@ figcaption {
 
     .intro {
         top: 320px;
-        left: 10px;
+        left: 12px;
     }
 
     .intro_text {
@@ -685,7 +685,7 @@ figcaption {
         position: absolute;
         width: 300px;
         top: 45%;
-        margin: 0 -42%;
+        margin: 0 -45%;
         font-size: 0.8rem;
         text-size-adjust: auto;
         border: 1px solid blue;
@@ -697,6 +697,6 @@ figcaption {
 
     #footer {
         position: relative;
-        bottom: 0;
+        bottom: -20px;
     }
 }
