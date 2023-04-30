@@ -684,9 +684,8 @@ figcaption {
     .pj_content {
         position: absolute;
         width: 300px;
-        height: 200px;
         top: 45%;
-        margin: 0 -40%;
+        margin: 0 -42%;
         font-size: 0.8rem;
         text-size-adjust: auto;
         border: 1px solid blue;
@@ -698,6 +697,6 @@ figcaption {
 
     #footer {
         position: absolute;
-        bottom: -50%;
+        bottom: 0;
     }
 }
