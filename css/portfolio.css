@@ -42,7 +42,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: rgba(0, 0, 0, 0.78);
     z-index: 999;
     opacity: 1;
     transition: 0.5s ease;
@@ -610,7 +610,8 @@ figcaption {
     }
 
     .intro_text {
-        margin: 10px 0;
+        position: relative;
+        top: 10px;
         font-size: 3.2rem;
     }
 
@@ -622,7 +623,7 @@ figcaption {
         padding: 1rem 0;
     }
 
-    .pj_component {
+    . pj_component{
         width: 500px;
         height: 100vw;
     }
