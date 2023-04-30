@@ -612,6 +612,7 @@ figcaption {
 
     .intro {
         top: 300px;
+        left: 0px;
         border: 1px solid red;
     }
 
@@ -641,24 +642,15 @@ figcaption {
 
     .category-title {
         width: 15%;
-        margin: 0 10%;
+        margin: 0 8%;
     }
 
     .pj_component {
-        width: 383px;
+        width: 384px;
         height: 120vw;
-        margin: 5% 0;
+        margin: 3% 0;
     }
-
-    .hv_caption {
-        position: absolute;
-        background-color: rgba(204, 57, 52, 0.8);
-    
-        width: 100%;
-        height: 100%;
-        color: #FFD577;
-    }    
-
+  
     .pj_thumbnail {
         width: 20rem;
         margin: 10px 30px;
@@ -669,7 +661,7 @@ figcaption {
         width: 300px;
         height: 200px;
         top: 45%;
-        right: 20%;
+        left: 5%;
         font-size: 0.8rem;
         text-size-adjust: auto;
     }
