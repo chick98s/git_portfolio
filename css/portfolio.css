@@ -611,8 +611,8 @@ figcaption {
     }
 
     .intro {
-        top: 300px;
-        left: 5px;
+        top: 320px;
+        left: 10px;
     }
 
     .intro_text {
@@ -630,8 +630,12 @@ figcaption {
     #profile article figure img {
         width: 300px;
         height: 300px;
-        left: 5%;
+        margin: 0 15px;
         border-radius: 50%;
+    }
+
+    .arrow_txt {
+        width: 300px;
     }
 
     .arrow_txt p {
