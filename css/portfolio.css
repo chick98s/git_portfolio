@@ -568,6 +568,10 @@ figcaption {
         left: 30%;
     }
 
+    #header {
+        width: 30%;
+    }
+
     #nav {
         display: none;
     }
@@ -663,6 +667,7 @@ figcaption {
     #profile .skill {
         padding-top: 450px;
         padding-right: 850px;
+        border: 2px solid blue;
     }
     
     #profile .skill h3 {
@@ -680,6 +685,7 @@ figcaption {
         font-size: 1.5rem;
         padding-bottom: 10px;
         position: relative;
+
     }
 
     .category-title {
@@ -715,6 +721,7 @@ figcaption {
     #footer {
         position: relative;
         z-index: 1;
-        height: 1.2rem;
+        height: 5rem;
+        bottom: 0;
     }
 }
