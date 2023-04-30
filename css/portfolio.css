@@ -631,7 +631,7 @@ figcaption {
     }
 
     #profile {
-        height: 140vh;
+        height: 120vh;
     }
 
     #profile article figure img {
@@ -667,6 +667,7 @@ figcaption {
     #profile .skill {
         position: relative;
         width: 25rem;
+        height: 15rem;
         top: 50%;
         left: 10%;
         border: 2px solid blue;
