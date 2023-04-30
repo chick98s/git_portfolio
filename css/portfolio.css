@@ -612,7 +612,7 @@ figcaption {
 
     .intro {
         top: 300px;
-        margin: 0 10px;
+        margin: 0 5px;
     }
 
     .intro_text {
@@ -656,10 +656,8 @@ figcaption {
 
     .pj_content {
         position: absolute;
-        width: 680px;
+        width: 300px;
         height: 200px;
-        -webkit-transform: translate(72%, 42%);
-        transform: translate(72%, 42%);
         text-size-adjust: auto;
     }
 
