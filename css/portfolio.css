@@ -605,13 +605,11 @@ figcaption {
     }
 
     .intro {
-        top: 500px;
+        top: 200px;
         left: 0;
     }
 
     .intro_text {
-        position: relative;
-        top: 10px;
         font-size: 3.2rem;
     }
 
@@ -619,8 +617,17 @@ figcaption {
         font-size: 3.2rem;
     }
 
+    #profile article figure img {
+        width: 300px;
+        height: 300px;
+        border-radius: 40%;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 5;
+    }
+
     .category-title {
-        padding: 1rem 0;
+        width: inline-block;
     }
 
     .pj_component{
@@ -630,7 +637,7 @@ figcaption {
 
     .pj_thumbnail {
         width: 15rem;
-        
+
     }
     
     .nav_toggle {
