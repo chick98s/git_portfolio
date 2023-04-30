@@ -617,6 +617,10 @@ figcaption {
         font-size: 3.2rem;
     }
 
+    #profile {
+        height: 100vh;
+    }
+
     #profile article figure img {
         width: 300px;
         height: 300px;
@@ -631,12 +635,12 @@ figcaption {
     }
 
     .pj_component{
-        width: 400px;
-        height: 100vw;
+        width: 380px;
+        height: 300vw;
     }
 
     .pj_thumbnail {
-        width: 15rem;
+        width: 17rem;
 
     }
     
