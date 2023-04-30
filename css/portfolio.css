@@ -680,6 +680,7 @@ figcaption {
     }
 
     #footer {
+        padding: 30%;
         bottom: 0;
     }
 }
