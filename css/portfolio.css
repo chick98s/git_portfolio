@@ -642,12 +642,13 @@ figcaption {
 
     .category-title {
         width: 15%;
-        margin: 0 7%;
+        margin: 0 8%;
     }
 
     .pj_component {
         width: 383px;
         height: 120vw;
+        margin: 0 5%;
     }
 
     .hv_caption {
@@ -656,7 +657,6 @@ figcaption {
     
         width: 100%;
         height: 100%;
-        margin: 0 5%;
         color: #FFD577;
     }    
 
@@ -671,7 +671,7 @@ figcaption {
         height: 200px;
         top: 45%;
         right: 20%;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         text-size-adjust: auto;
     }
 
@@ -680,7 +680,7 @@ figcaption {
     }
 
     #footer {
-        padding: 30%;
+        padding: 10%;
         bottom: 0;
     }
 }
