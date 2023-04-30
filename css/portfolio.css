@@ -612,7 +612,7 @@ figcaption {
 
     .intro {
         top: 300px;
-        left: 0px;
+        left: 5px;
     }
 
     .intro_text {
@@ -634,8 +634,10 @@ figcaption {
         border-radius: 50%;
     }
 
-    .arrow_txt {
+    .arrow_txt p {
         width: 300px;
+        height: 150px;
+        font-size: 1rem;
         text-size-adjust: auto;
     }
 
@@ -657,7 +659,6 @@ figcaption {
         padding-bottom: 10px;
         position: relative;
     }
-
 
     .category-title {
         width: 15%;
