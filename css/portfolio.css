@@ -624,7 +624,7 @@ figcaption {
     }
 
     #profile {
-        height: 100vh;
+        height: 140vh;
     }
 
     #profile article figure img {
@@ -684,6 +684,7 @@ figcaption {
     .pj_content {
         position: absolute;
         width: 300px;
+        height: auto;
         top: 45%;
         margin: 0 -45%;
         font-size: 0.8rem;
