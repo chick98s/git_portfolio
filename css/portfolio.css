@@ -573,7 +573,9 @@ figcaption {
     }
 
     .nav_toggle {
-        width: 100px;
+        position: relative;
+        width: 50px;
+        right: 0;
         display: block;
     }
 
@@ -612,7 +614,7 @@ figcaption {
 
     .intro {
         top: 320px;
-        left: 12px;
+        left: 15px;
     }
 
     .intro_text {
@@ -702,7 +704,7 @@ figcaption {
         width: 300px;
         height: auto;
         top: 45%;
-        margin: 0 -45%;
+        margin: -2% -45%;
         font-size: 0.8rem;
         text-size-adjust: auto;
     }
