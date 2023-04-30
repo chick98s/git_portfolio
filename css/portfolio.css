@@ -511,7 +511,7 @@ figcaption {
     font-family: 'Noto Serif KR', serif;
 }
 
-.hv_caption>.caption {
+.hv_caption > .caption {
     display: inline-block;
     font-size: 1.1em;
     height: 1.1em;
@@ -575,6 +575,7 @@ figcaption {
     /* 햄버거 메뉴 */
     .nav_toggle .nav_toggle {
         position: relative;
+        right: 0;
         width: 2rem;
         height: 1.4rem;
     }
@@ -628,17 +629,34 @@ figcaption {
     }
 
     .category-title {
-        width: inline-block;
+        width: 15%;
     }
 
-    .pj_component{
-        width: 380px;
+    .pj_component {
+        width: 382px;
         height: 300vw;
     }
 
-    .pj_thumbnail {
-        width: 17rem;
+    .hv_caption {
+        position: absolute;
+        background-color: rgba(204, 57, 52, 0.8);
+    
+        width: 100%;
+        height: 100%;
+        color: #FFD577;
+    }    
 
+    .pj_content {
+        position: absolute;
+        width: 680px;
+        height: 200px;
+        -webkit-transform: translate(72%, 42%);
+        transform: translate(72%, 42%);
+        text-size-adjust: auto;
+    }
+
+    .pj_thumbnail {
+        width: 20rem;
     }
     
     .nav_toggle {
