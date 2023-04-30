@@ -569,7 +569,7 @@ figcaption {
     }
 
     #header {
-        width: 30%;
+        width: 80%;
     }
 
     #nav {
@@ -664,8 +664,9 @@ figcaption {
     }
 
     #profile .skill {
-        padding-top: 450px;
-        padding-right: 850px;
+        position: relative;
+        top: 50%;
+        left: 10%;
         border: 2px solid blue;
     }
     
