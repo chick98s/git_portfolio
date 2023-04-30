@@ -642,7 +642,7 @@ figcaption {
 
     .category-title {
         width: 15%;
-        margin: 0 20px;
+        margin: 0 25%;
         border: 1px solid red;
     }
 
@@ -662,7 +662,7 @@ figcaption {
 
     .pj_thumbnail {
         width: 20rem;
-        margin: 10px 20px;
+        margin: 10px 30px;
     }
 
     .pj_content {
