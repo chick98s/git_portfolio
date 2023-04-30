@@ -623,8 +623,8 @@ figcaption {
     }
 
     .pj_component {
-        width: 100%;
-        height: 60vw;
+        width: 500px;
+        height: 100vw;
     }
 
     .pj_thumbnail {
