@@ -610,11 +610,12 @@ figcaption {
     }
 
     .intro_text {
-        font-size: 3rem;
+        margin: 50px 0;
+        font-size: 3.2rem;
     }
 
     .typing {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     .category-title {
