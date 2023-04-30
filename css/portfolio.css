@@ -572,6 +572,11 @@ figcaption {
         display: none;
     }
 
+    .nav_toggle {
+        width: 100px;
+        display: block;
+    }
+
     /* 햄버거 메뉴 */
     .nav_toggle .nav_toggle {
         position: relative;
@@ -625,11 +630,14 @@ figcaption {
     #profile article figure img {
         width: 300px;
         height: 300px;
-        border-radius: 40%;
+        border-radius: 50%;
+        top: 10px;
+        text-align: center;
     }
 
     .category-title {
         width: 15%;
+        left: -50px;
     }
 
     .pj_component {
@@ -657,10 +665,10 @@ figcaption {
 
     .pj_thumbnail {
         width: 20rem;
+        margin: 0 10px;
     }
-    
-    .nav_toggle {
-        width: 100px;
-        display: block;
+
+    #skill {
+        display: none;
     }
 }
