@@ -656,8 +656,8 @@ figcaption {
 
     figcaption {
         position: relative;
-        top: 50px;
-        left: 80px;
+        top: 35px;
+        left: 25%;
         border-radius: 15px;
         width: 20%;
         text-align: center;
@@ -675,7 +675,7 @@ figcaption {
     }
     
     #profile .skill h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     #profile .skill_list > li {
@@ -686,7 +686,7 @@ figcaption {
     
     #profile .skill_list > li h4 {
         color: #FFD577;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding-bottom: 10px;
         position: relative;
 
@@ -720,5 +720,11 @@ figcaption {
 
     #skill .c_list {
         display: none;
+    }
+
+    #footer {
+        position: relative;
+        display: table;
+        bottom: 0;
     }
 }
