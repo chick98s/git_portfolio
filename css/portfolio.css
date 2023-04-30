@@ -638,6 +638,7 @@ figcaption {
     .category-title {
         width: 15%;
         left: -50px;
+        border: 1px solid red;
     }
 
     .pj_component {
