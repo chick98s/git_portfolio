@@ -563,6 +563,14 @@ figcaption {
 
 /* 작아질 경우 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
+
+    /* 모바일 수평 스크롤 금지 */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .loading img {
         top: 40%;
         left: 30%;
