@@ -766,7 +766,7 @@ figcaption {
     #footer {
         position: relative;
         display: table;
-        bottom: -20%;
+        bottom: -120%;
         border: 1px solid purple;
     }
 }
