@@ -672,6 +672,7 @@ figcaption {
         top: 50%;
         left: 10%;
         border: 2px solid blue;
+        display: none;
     }
     
     #profile .skill h3 {
@@ -725,6 +726,7 @@ figcaption {
     #footer {
         position: relative;
         display: table;
-        bottom: 0;
+        bottom: -20%;
+        border: 1px solid purple;
     }
 }
