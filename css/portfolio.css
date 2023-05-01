@@ -281,6 +281,8 @@ a {
     content: '';
     position: absolute;
     background-color: #FFD577;
+    border: 1px #000;
+    border-style: solid none none solid;
     width: 10px;
     height: 10px;
     transform: rotate(45deg) translateX(-50%);
