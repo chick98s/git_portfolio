@@ -5,12 +5,10 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 100%;
-    box-sizing: border-box;
 }
 
 body {
-    line-height: 1.5;
+    position: relative;
     font-family: 'Sigmar', cursive;
 }
 
@@ -57,9 +55,8 @@ a {
 }
 
 .inner {
-    width: 1200px;
+    max-width: 1024px;
     margin: 0 auto;
-    position: relative;
 }
 
 /* header */
@@ -68,6 +65,7 @@ a {
     width: 100%;
     height: 110px;
     z-index: 300;
+    box-sizing: border-box;
     vertical-align: middle;
     background-color: #fff;
     transition: top 0.2s ease-in-out;
@@ -239,12 +237,13 @@ a {
 }
 
 #profile article figure {
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
-#profile article figure img {
+#profile figure img {
     width: 400px;
     height: 600px;
+    border-radius: 15px 15px 0 0;
     display: inline-block;
     cursor: pointer;
     z-index: 5;
@@ -254,24 +253,27 @@ a {
 .arrow_txt {
     position: relative;
     width: 500px;
-    height: 150px;
-    font-family: 'Noto Serif KR', serif;
+    height: 100px;
+    margin: 25px 0;
 }
 
 .arrow_txt p {
     position: absolute;
     background-color: #FFD577;
     word-wrap: break-word;
-    width: 500px;
-    height: 150px;
+    width: 450px;
+    height: 105px;
     color: #000;
+    border: 1px solid #000;
     text-align: center;
     font-size: 18px;
     padding: 20px;
     opacity: 0;
-    transition: 0.5s;
+    transition: all 0.5s ease-in;
     border-radius: 15px;
+    font-family: 'Noto Serif KR', serif;
     visibility: hidden;
+    z-index: 15;
     /* 특정 요소 접촉 시 이벤트 발생 */
 }
 
@@ -298,35 +300,38 @@ figcaption {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     background: rgba(0, 0, 0, 0.8);
+    z-index: 15;
 }
 
 #profile .skills {
-    padding-top: 110px;
-    padding-left: 150px;
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    padding-top: 80px;
     font-family: 'Noto Serif KR', serif;
 }
 
 #profile .skills h3 {
     color: #FFD577;
-    font-size: 4rem;
-    position: relative;
+    font-size: 3rem;
 }
 
 #profile .skill_list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 100px;
     color: #000;
+    font-size: 1.2rem;
 }
 
-#profile .skill_list>li {
-    width: 250px;
-    padding-bottom: 60px;
-    position: relative;
+#profile .skill_list > li {
+    width: 47%;
+    margin-top: 50px;
+    padding-bottom: 30px;
 }
 
-#profile .skill_list>li h4 {
+#profile .skill_list > li h4 {
     color: #FFD577;
     font-size: 2.6rem;
     padding-bottom: 10px;
@@ -347,7 +352,7 @@ figcaption {
 
 #skill {
     height: 80vh;
-    background-color: #524653;
+    background-color: #e0e0dc;
 }
 
 #skill .c_list::after {
@@ -362,7 +367,7 @@ figcaption {
     float: left;
     font-size: 2.5rem;
     width: 25%;
-    color: #141414;
+    color: #000;
     /*opacity: 0;*/
 }
 
@@ -426,7 +431,7 @@ figcaption {
 
 #project {
     background-color: #FFD577;
-    height: 215vh;
+    height: 217vh;
 }
 
 .category-title {
@@ -453,12 +458,11 @@ figcaption {
 }
 
 .pj_component {
-    width: 1200px;
     height: 350px;
     background: rgba(0, 0, 0, 0.78);
     border: 1px solid #fff;
     border-radius: 16px;
-
+    
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
 
@@ -503,7 +507,7 @@ figcaption {
 
     width: 100%;
     height: 100%;
-    color: #FFD577;
+    color: #000;
     opacity: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -511,9 +515,9 @@ figcaption {
     font-family: 'Noto Serif KR', serif;
 }
 
-.hv_caption>.caption {
+.hv_caption > .caption {
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 1em;
     height: 1.1em;
     position: absolute;
     top: 50%;
@@ -526,20 +530,20 @@ figcaption {
     position: absolute;
     width: 680px;
     height: 200px;
-    -webkit-transform: translate(72%, 42%);
-    transform: translate(72%, 42%);
+    -webkit-transform: translate(72%, 45%);
+    transform: translate(72%, 45%);
     color: #FFD577;
     font-family: 'Noto Serif KR', serif;
 }
 
 .pj_content h3 {
     font-family: "NEXON Lv2 Gothic Bold";
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 .pj_content ul {
-    margin: 1.2em 0;
-    font-size: 1.5em;
+    margin: 35px 0;
+    font-size: 1.4rem;
     font-weight: bold;
     line-height: 1.5;
 }
@@ -568,7 +572,7 @@ figcaption {
     html,
     body {
         max-width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     .loading img {
@@ -628,18 +632,15 @@ figcaption {
 
     /* 원 애니메이션 */
     .ball {
-        width: 800px;
-        height: 800px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
         background-color: #000;
     }
 
     #home .ball {
-        opacity: 0.07;
-        position: relative;
-        right: -300px;
-        bottom: -250px;
-        animation: hm_ball 3s linear infinite alternate;
+        top: 300px;
+        right: 30px;
     }
 
     @keyframes hm_ball {
@@ -654,7 +655,7 @@ figcaption {
         }
 
         100% {
-            right: -1800px;
+            right: -180px;
             bottom: -150px;
         }
     }
@@ -679,94 +680,87 @@ figcaption {
     #profile article figure img {
         width: 300px;
         height: 300px;
-        margin: -10px 20px;
+        margin: -20% 15%;
         border-radius: 50%;
     }
 
+    figcaption {
+        top: 80px;
+        left: 55%;
+        width: 20%;
+        border-radius: 45px;
+    }
+    
     .arrow_txt {
         width: 300px;
-        margin: 0 20px;
+        margin: 35% 5%;
     }
 
     .arrow_txt p {
         width: 310px;
-        height: 180px;
+        height: 115px;
         font-size: 1rem;
         text-size-adjust: auto;
     }
 
-    figcaption {
-        position: relative;
-        top: 35px;
-        left: 25%;
-        border-radius: 15px;
-        width: 20%;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.8);
-        background: rgba(0, 0, 0, 0.8);
-    }
-
     #profile .skills {
-        position: relative;
-        width: 25rem;
-        height: 15rem;
+        position: absolute;
         top: 50%;
-        left: 10%;
-        border: 2px solid blue;
-        display: none;
+        width: 90%;
+        left: 5%;
     }
 
     #profile .skills h3 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
-    #profile .skill_list>li {
-        width: 250px;
+    #profile .skill_list > li {
         padding-bottom: 20px;
-        position: relative;
     }
 
-    #profile .skill_list>li h4 {
-        color: #FFD577;
-        font-size: 1rem;
+    #profile .skill_list > li h4 {
+        font-size: 1.5rem;
         padding-bottom: 10px;
-        position: relative;
     }
 
-    .category-title {
-        width: 15%;
-        margin: 0 8.5%;
+
+    /* 스킬 */
+    #skill .c_list li {
+        width: 49.5%;
+        top: 50px;
+        margin: 20px 0;
+        font-size: 1.75rem;
+        border: 1px solid red;
+    }
+
+    #project {
+        height: 270vh;
     }
 
     .pj_component {
-        width: 384px;
-        height: 140vw;
+        width: 383px;
+        height: 130vw;
         margin: 3% 0;
     }
 
     .pj_thumbnail {
         width: 20rem;
-        margin: 10px 30px;
+        margin: 20px 30px;
     }
 
     .pj_content {
-        position: absolute;
         width: 300px;
         height: auto;
         top: 45%;
-        margin: -2% -45%;
-        font-size: 0.8rem;
+        margin: -3% -45%;
         text-size-adjust: auto;
     }
 
-    #skill .c_list {
-        display: none;
+    .pj_content h3 {
+        font-size: 2rem;
     }
-
-    #footer {
-        position: relative;
-        display: table;
-        bottom: -120%;
-        border: 1px solid purple;
+    
+    .pj_content ul {
+        font-size: 1.2rem;
     }
 }
