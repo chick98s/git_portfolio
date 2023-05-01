@@ -300,13 +300,13 @@ figcaption {
     background: rgba(0, 0, 0, 0.8);
 }
 
-#profile .skill {
+#profile .skills {
     padding-top: 110px;
     padding-left: 150px;
     font-family: 'Noto Serif KR', serif;
 }
 
-#profile .skill h3 {
+#profile .skills h3 {
     color: #FFD577;
     font-size: 4rem;
     position: relative;
@@ -511,7 +511,7 @@ figcaption {
     font-family: 'Noto Serif KR', serif;
 }
 
-.hv_caption > .caption {
+.hv_caption>.caption {
     display: inline-block;
     font-size: 1.1em;
     height: 1.1em;
@@ -618,6 +618,39 @@ figcaption {
         min-height: auto;
     }
 
+    /* 원 애니메이션 */
+    .ball {
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+
+    #home .ball {
+        opacity: 0.07;
+        position: relative;
+        right: -300px;
+        bottom: -250px;
+        animation: hm_ball 3s linear infinite alternate;
+    }
+
+    @keyframes hm_ball {
+        0% {
+            right: -120px;
+            bottom: -120px;
+        }
+
+        50% {
+            right: -160px;
+            bottom: -135px;
+        }
+
+        100% {
+            right: -1800px;
+            bottom: -150px;
+        }
+    }
+
     .intro {
         top: 320px;
         left: 15px;
@@ -665,7 +698,7 @@ figcaption {
         background: rgba(0, 0, 0, 0.8);
     }
 
-    #profile .skill {
+    #profile .skills {
         position: relative;
         width: 25rem;
         height: 15rem;
@@ -674,23 +707,22 @@ figcaption {
         border: 2px solid blue;
         display: none;
     }
-    
-    #profile .skill h3 {
+
+    #profile .skills h3 {
         font-size: 1.5rem;
     }
-    
-    #profile .skill_list > li {
+
+    #profile .skill_list>li {
         width: 250px;
         padding-bottom: 20px;
         position: relative;
     }
-    
-    #profile .skill_list > li h4 {
+
+    #profile .skill_list>li h4 {
         color: #FFD577;
         font-size: 1rem;
         padding-bottom: 10px;
         position: relative;
-
     }
 
     .category-title {
@@ -703,7 +735,7 @@ figcaption {
         height: 140vw;
         margin: 3% 0;
     }
-  
+
     .pj_thumbnail {
         width: 20rem;
         margin: 10px 30px;
