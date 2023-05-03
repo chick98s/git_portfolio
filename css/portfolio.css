@@ -600,7 +600,7 @@ figcaption {
     }
 
     .nav_toggle.active:hover {
-        filter: opacity(0.2) drop-shadow(0 0 0 #ff0404);
+        filter: opacity(0.2) drop-shadow(0 0 0 #ff0000);
     }
 
     .nav_icon {
