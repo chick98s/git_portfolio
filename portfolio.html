@@ -12,8 +12,6 @@
     <meta property="og:image" content="./image/pf_img.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" type="text/css" href="/path/to/jquery.easy-pie-chart.css">
-
     <link rel="stylesheet" href="./css/portfolio.css" />
 
     <title>포트폴리오</title>
@@ -41,10 +39,10 @@
             <!-- nav -->
             <nav id="nav" onclick="tgMenu();">
                 <ul class="gnb">
-                    <li><a href="#home" class="item is-active" active-color='#A27944'>Home</a></li>
-                    <li><a href="#profile" class="item" active-color='#A27944'>Profile</a></li>
-                    <li><a href="#skill" class="item" active-color='#E6756A'>Skill</a></li>
-                    <li><a href="#project" class="item" active-color='#FFD577'>Project</a></li>
+                    <li><a href="#home" class="item is-active" active-color='#000'>Home</a></li>
+                    <li><a href="#profile" class="item" active-color='#8ED9F9'>Profile</a></li>
+                    <li><a href="#skill" class="item" active-color='#fff'>Skill</a></li>
+                    <li><a href="#project" class="item" active-color='#B8CABA'>Project</a></li>
 
                     <span class="marker"></span>
                 </ul>
@@ -86,7 +84,7 @@
                             </figure>
                         </article>
 
-                        <article class="skills">
+                        <article class="skills onScroll inUp">
                             <h3>About Me</h3>
                             <ul class="skill_list">
                                 <li>
@@ -134,7 +132,7 @@
             <section id="skill">
                 <div class="inner">
                     <h2 class="category-title">SKILL</h2>
-                    <ul class="c_list">
+                    <ul class="c_list onScroll inUp">
                         <li class="skill1">
                             <span class="chart" data-percent="95">
                                 <span class="percent">95</span>
@@ -171,7 +169,7 @@
                 <div class="inner">
                     <h2 class="category-title">PROJECT</h2>
 
-                    <div class="pj_component pj_div">
+                    <div class="pj_component onScroll inLeft">
                         <figure class="project_box">
                             <a class="pj_thumbnail" href="http://chick98s.github.io/git_cy/ry_hp.html" target="_blank">
                                 <!-- hover시 보여줄 부분 -->
@@ -193,7 +191,7 @@
                         </div>
                     </div>
 
-                    <div class="pj_component">
+                    <div class="pj_component onScroll inLeft">
                         <figure class="project_box">
                             <a class="pj_thumbnail" href="https://chick98s.github.io/git_music/song.html"
                                 target="_blank">
@@ -216,7 +214,7 @@
                         </div>
                     </div>
 
-                    <div class="pj_component">
+                    <div class="pj_component onScroll inLeft">
                         <figure class="project_box">
                             <a class="pj_thumbnail" href="http://step079.dothome.co.kr/cafe.html" target="_blank">
                                 <!-- hover시 보여줄 부분 -->
@@ -238,7 +236,7 @@
                         </div>
                     </div>
 
-                    <div class="pj_component">
+                    <div class="pj_component onScroll inLeft">
                         <figure class="project_box">
                             <a class="pj_thumbnail" href="https://chick98s.github.io/git_portfolio/portfolio.html"
                                 target="_blank">
@@ -272,7 +270,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/path/to/jquery.easy-pie-chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
 
     <script src="./js/portfolio.js"></script>
 </body>
