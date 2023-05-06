@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;300&display=swap');
 
 * {
     margin: 0;
@@ -9,7 +8,7 @@
 
 body {
     position: relative;
-    font-family: 'Sigmar', cursive;
+    font-family: 'Hahmlet', serif;
 }
 
 body::-webkit-scrollbar {
@@ -17,7 +16,9 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #E6756A;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    background-color: #222222;
 }
 
 body::-webkit-scrollbar-track {
@@ -63,12 +64,12 @@ a {
 #header {
     position: fixed;
     width: 100%;
-    height: 118px;
+    height: 100px;
     top: 0;
     z-index: 300;
     box-sizing: border-box;
     vertical-align: middle;
-    background-color: #fff;
+    background-color: #E1E1E1;
     transition: top 0.2s ease-in-out;
 }
 
@@ -98,14 +99,14 @@ a {
     justify-content: space-around;
     top: 0;
     right: 0;
-    font-size: 1.8em;
+    font-size: 1rem;
 }
 
 .gnb .item {
     position: relative;
     display: inline;
     font-size: 1.2em;
-    color: #757575;
+    color: #000;
     transition: .3s;
 }
 
@@ -116,18 +117,18 @@ a {
     width: 100%;
     height: 8px;
     opacity: 0;
-    background-color: #ada5a5;
+    bottom: -25px;
+    background-color: #ffffff;
     border-radius: 8px 8px 0 0;
     transition: .3s;
 }
 
 .item:not(.is-active):hover::before {
     opacity: 1;
-    bottom: -14px;
 }
 
 .item:not(.is-active):hover {
-    color: #333;
+    color: #757575;
 }
 
 .marker {
@@ -150,7 +151,7 @@ a {
 #home {
     overflow: hidden;
     z-index: 200;
-    background-color: #FFD577;
+    background-color: #F5F5F5;
 }
 
 /* 타이핑 */
@@ -159,7 +160,7 @@ a {
     width: 100%;
     top: 300px;
     text-align: left;
-    color: #A27944;
+    color: #222222;
 }
 
 .intro_text {
@@ -175,21 +176,20 @@ a {
 
 @keyframes cursor {
     0% {
-        border-right: 2px solid #A27944
+        border-right: 2px solid #222222;
     }
 
     50% {
-        border-right: 2px solid #ffffff
+        border-right: 2px solid #ffffff;
     }
 
     100% {
-        border-right: 2px solid #A27944
+        border-right: 2px solid #222222;
     }
 }
 
 .intro h1 {
     font-size: 1.5rem;
-    font-family: 'Noto Serif KR', serif;
 }
 
 /* 원 애니메이션 */
@@ -223,8 +223,31 @@ a {
     }
 }
 
+/* 스크롤 이벤트 */
+.onScroll { position: relative; }
+.inUp {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all 2s ease-out;
+    -webkit-transition:all 2s ease-out;
+    transform: translate3d(0px, 100px, 0px);
+    backface-visibility: hidden;
+}
+.inLeft {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all .7s linear;
+    -webkit-transition: all .7s linear;
+    transform: translate3d(-100px, 0px, 0px);
+}
+.onScroll.active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: translate3d(0px, 0px, 0px);
+}
+
 #profile {
-    background-color: #e0e0dc;
+    background-image: url(../image/bg_profile.png);
 }
 
 #profile .profile_wrap {
@@ -255,10 +278,8 @@ a {
 
 .arrow_txt p {
     position: absolute;
-    background-color: #FFD577;
+    background-color: #8ED9F9;
     word-wrap: break-word;
-    width: 450px;
-    height: 105px;
     color: #000;
     border: 1px solid #000;
     text-align: center;
@@ -267,7 +288,6 @@ a {
     opacity: 0;
     transition: all 0.5s ease-in;
     border-radius: 15px;
-    font-family: 'Noto Serif KR', serif;
     visibility: hidden;
     z-index: 15;
     /* 특정 요소 접촉 시 이벤트 발생 */
@@ -276,7 +296,7 @@ a {
 .arrow_txt p::after {
     content: '';
     position: absolute;
-    background-color: #FFD577;
+    background-color: #8ED9F9;
     border: 1px #000;
     border-style: solid none none solid;
     width: 10px;
@@ -306,11 +326,10 @@ figcaption {
     width: 60%;
     left: 50%;
     padding-top: 80px;
-    font-family: 'Noto Serif KR', serif;
 }
 
 #profile .skills h3 {
-    color: #E6756A;
+    color: #5A6B5D;
     font-size: 3rem;
 }
 
@@ -330,7 +349,7 @@ figcaption {
 }
 
 #profile .skill_list>li h4 {
-    color: #E6756A;
+    color: #5A6B5D;
     font-size: 2.6rem;
     padding-bottom: 10px;
     position: relative;
@@ -350,7 +369,7 @@ figcaption {
 
 #skill {
     height: 80vh;
-    background-color: #A27944;
+    background-image: url(../image/bg_skill.png);
 }
 
 #skill .c_list::after {
@@ -363,10 +382,10 @@ figcaption {
     position: relative;
     top: 120px;
     float: left;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     width: 25%;
-    color: #000;
-    /*opacity: 0;*/
+    color: #222222;
+    opacity: 0;
 }
 
 #skill .chart {
@@ -374,14 +393,13 @@ figcaption {
     width: 100%;
     height: 100px;
     display: table;
-    font-family: 'Noto Serif KR', serif;
 }
 
 #skill .c_list .percent {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 140%;
+    left: 52%;
+    transform: translate(-50%, 120%);
 }
 
 #skill .c_list .percent::after {
@@ -392,14 +410,15 @@ figcaption {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
 }
 
 #skill .c_list .txt {
+    font-size: 1.5rem;
     font-weight: 300;
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 90%;
 }
 
 #skill.on .c_list li {
@@ -407,28 +426,8 @@ figcaption {
     top: 0;
 }
 
-#skill.on .skill1 {
-    -webkit-transition: opacity 0.4s 0.6s, top 0.4s 0.6s;
-    transition: opacity 0.4s 0.6s, top 0.4s 0.6s;
-}
-
-#skill.on .skill2 {
-    -webkit-transition: opacity 0.4s 0.8s, top 0.4s 0.8s;
-    transition: opacity 0.4s 0.8s, top 0.4s 0.8s;
-}
-
-#skill.on .skill3 {
-    -webkit-transition: opacity 0.4s 1.0s, top 0.4s 1.0s;
-    transition: opacity 0.4s 1.0s, top 0.4s 1.0s;
-}
-
-#skill.on .skill4 {
-    -webkit-transition: opacity 0.4s 1.2s, top 0.4s 1.2s;
-    transition: opacity 0.4s 1.2s, top 0.4s 1.2s;
-}
-
 #project {
-    background-color: #FFD577;
+    background-color: #B8CABA;
     height: 217vh;
 }
 
@@ -439,8 +438,7 @@ figcaption {
     font-size: 2em;
     line-height: 1.6;
     margin-bottom: 54px;
-    color: #FFD577;
-    -webkit-text-stroke: 2px black;
+    color: #222222;
 }
 
 .category-title::after {
@@ -452,7 +450,7 @@ figcaption {
     display: block;
     width: 34px;
     height: 4px;
-    background-color: #E6756A;
+    background-color: #5A6B5D;
 }
 
 .pj_component {
@@ -501,7 +499,7 @@ figcaption {
 
 .hv_caption {
     position: absolute;
-    background-color: rgba(204, 57, 52, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 
     width: 100%;
     height: 100%;
@@ -510,7 +508,6 @@ figcaption {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     vertical-align: middle;
-    font-family: 'Noto Serif KR', serif;
 }
 
 .hv_caption>.caption {
@@ -530,12 +527,10 @@ figcaption {
     height: 200px;
     -webkit-transform: translate(72%, 45%);
     transform: translate(72%, 45%);
-    color: #FFD577;
-    font-family: 'Noto Serif KR', serif;
+    color: #B8CABA;
 }
 
 .pj_content h3 {
-    font-family: "NEXON Lv2 Gothic Bold";
     font-size: 2.5rem;
 }
 
@@ -549,18 +544,19 @@ figcaption {
 /* FOOTER */
 #footer {
     width: 100%;
-    height: 3.2rem;
+    height: 5rem;
     font-size: 1rem;
     text-align: center;
-    background: #A27944;
-    color: #FFD577;
-    font-family: 'Noto Serif KR', serif;
+    background: #222222;
+    color: #fff;
     z-index: 201;
 }
 
 #footer p {
+    position: relative;
     display: block;
     margin: 0 auto;
+    top: 15px;
 }
 
 /* 작아질 경우 */
@@ -580,7 +576,6 @@ figcaption {
 
     #header {
         width: 100%;
-        border: 1px solid black;
     }
 
     /* 햄버거 메뉴 */
@@ -600,7 +595,7 @@ figcaption {
     }
 
     .nav_toggle.active:hover {
-        filter: opacity(0.2) drop-shadow(0 0 0 #ff0000);
+        filter: opacity(0.1) drop-shadow(0 0 0 #ff0000);
     }
 
     .nav_icon {
@@ -634,12 +629,12 @@ figcaption {
     /* 보여질 메뉴 */
     #nav {
         width: 100%;
-        height: 400px;
-        border: 1px solid red;
+        height: 100px;
         display: none;
 
         /* active가 되면 보여짐 */
-        background-color: rgba(238, 236, 240, 0.8);
+        background-color: #E1E1E1;
+        opacity: 0.8;
     }
 
     #nav.active {
@@ -683,7 +678,11 @@ figcaption {
     }
 
     .intro_text {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+
+    .intro h1 {
+        font-size: 1.6rem;
     }
 
     .typing {
@@ -692,6 +691,7 @@ figcaption {
 
     #profile {
         height: 120vh;
+        background-image: url(../image/mb_profile.png);
     }
 
     #profile article figure img {
@@ -710,7 +710,7 @@ figcaption {
 
     .arrow_txt {
         width: 300px;
-        margin: 35% 5%;
+        margin: 30% 5%;
     }
 
     .arrow_txt p {
@@ -741,12 +741,22 @@ figcaption {
     }
 
     /* 스킬 */
+    #skill {
+        background-image: url(../image/mb_skill.png);
+    }
+
+    #skill .c_list {
+        margin-top: -50px;
+    }
+
     #skill .c_list li {
-        width: 49.5%;
-        top: 50px;
-        margin: 20px 0;
+        width: 48%;
+        margin: -45px 3px;
         font-size: 1.75rem;
-        border: 1px solid purple;
+    }
+
+    #skill .c_list .txt {
+        font-size: 0.8rem;
     }
 
     #project {
@@ -778,5 +788,9 @@ figcaption {
 
     .pj_content ul {
         font-size: 1.2rem;
+    }
+    
+    #footer p {
+        top: 15px;
     }
 }
