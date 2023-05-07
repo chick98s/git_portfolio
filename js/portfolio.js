@@ -165,6 +165,9 @@ $(document).ready(function () {
 
 /*
 $(window).on({
+  "load":function() {
+    onScroll();
+  },
   "resize":function(){
     onScroll();
   },
