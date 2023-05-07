@@ -41,7 +41,7 @@ var lastScrollTop = 0;
 var delta = 5; //동작의 구현이 시작되는 위치
 var navbarHeight = $("header").outerHeight();
 
-$(window).scroll(function(event) {
+$(window).scroll(function (event) {
   didScroll = true;
 });
 
@@ -63,8 +63,7 @@ function hasScrolled() {
   if (st > lastScrollTop && st > navbarHeight) {
     //스크롤 down
     $("header").removeClass("nav-down").addClass("nav-up");
-  } 
-  else {
+  } else {
     //스크롤 up
     if (st + $(window).height() < $(document).height()) {
       $("header").removeClass("nav-up").addClass("nav-down");
@@ -75,44 +74,104 @@ function hasScrolled() {
 
 //nav의 이벤트
 function handleIndicator(el) {
-  items.forEach(item => {
-    item.classList.remove('is-active');
-    item.removeAttribute('style');
+  items.forEach((item) => {
+    item.classList.remove("is-active");
+    item.removeAttribute("style");
   });
 
-  marker.style.width = '${el.offsetWidth}px';
-  marker.style.left = '${el.offsetLeft}px';
-  marker.style.backgroundColor = el.getAttribute('active-color');
+  marker.style.width = "${el.offsetWidth}px";
+  marker.style.left = "${el.offsetLeft}px";
+  marker.style.backgroundColor = el.getAttribute("active-color");
 
-  el.classList.add('is-active');
-  el.style.color = el.getAttribute('active-color');
+  el.classList.add("is-active");
+  el.style.color = el.getAttribute("active-color");
 }
 
-items.forEach(item => {
-  item.addEventListener('click', (e) => {handleIndicator(e.target)});
-  item.classList.contains('is-active') && handleIndicator(item);
+items.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    handleIndicator(e.target);
+  });
+  item.classList.contains("is-active") && handleIndicator(item);
 });
 
+//토글메뉴
+function tgMenu() {
+  let tgmenu = document.querySelector(".nav_toggle");
+  tgmenu.classList.toggle("active");
+
+  let menu = document.querySelector("#nav");
+  menu.classList.toggle("active");
+}
+
+//스크롤 이벤트
+function onScroll() {
+  var $animation_elements = $(".onScroll");
+  var $window = $(window);
+
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = window_top_position + window_height;
+
+  $.each($animation_elements, function () {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = element_top_position + element_height;
+
+    if (element_bottom_position >= window_top_position && element_top_position <= window_bottom_position) {
+      $element.addClass("active");
+    } 
+    else {
+      $element.removeClass("active");
+    }
+  });
+}
+
+function profileOn() {
+  var pfTop = $("#profile").offset().top;
+  var scroll = document.documentElement.scrollTop;
+  $("body")[scroll < pfTop ? "addClass" : "removeClass"]("top");
+}
+
+function skillsChart() {
+  var pfTop = $("#profile").offset().top;
+  var skTop = $("#skill").offset().top;
+  var scroll = document.documentElement.scrollTop;
+
+  $("#skill")[scroll > skTop - 500 ? "addClass" : "removeClass"]("on");
+
+  if (scroll > pfTop + 100) {
+    $(".chart").easyPieChart({
+      barColor: "#EC2027",
+      trackColor: "#ccc",
+      scaleColor: false,
+      lineCap: "round",
+      lineWidth: 20, //차트선 두께
+      size: 180, //차트크기
+      onStart: $.noop,
+      onStop: $.noop,
+      onStep: function (from, to, percent) {
+        $(this.el).find(".percent").text(Math.round(percent));
+      },
+    });
+  }
+}
+
 //jquery
-$(document).ready(function(){
+$(document).ready(function () {
+  profileOn();
+  skillsChart();
+});
 
-  var toggle_nav = $('.nav_toggle');
-  toggle_nav.on('click', function(e){
-    e.preventDefault();
-    $(this).toggleClass('open_nav_toggle');
-  });
-
-
-  $('.skill1').easyPieChart({
-    barColor: "#3C486B",
-    scaleColor: false,
-    lineCap: "round",
-    lineWidth: 10,
-    size: 100,
-    onStart: $.noop,
-    onStop: $.noop,
-    onStep: function (from, to, percent) {
-      $(this.el).find(".percent").text(Math.round(percent));
-    },
-  });
+$(window).on({
+  "load":function(){
+    profileOn();
+    onScroll();
+  },
+  "resize":function(){
+    onScroll();
+  },
+  "scroll":function(){
+    onScroll();
+  }
 });
