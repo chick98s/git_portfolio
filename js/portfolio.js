@@ -164,10 +164,6 @@ $(document).ready(function () {
 });
 
 $(window).on({
-  "load":function(){
-    profileOn();
-    onScroll();
-  },
   "resize":function(){
     onScroll();
   },
