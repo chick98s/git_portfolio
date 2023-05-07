@@ -163,6 +163,7 @@ $(document).ready(function () {
   skillsChart();
 });
 
+/*
 $(window).on({
   "resize":function(){
     onScroll();
@@ -171,3 +172,4 @@ $(window).on({
     onScroll();
   }
 });
+*/
