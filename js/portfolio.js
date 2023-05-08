@@ -13,6 +13,7 @@ let i = 0;
 html.style.overflow = "hidden"; //로딩중 스크롤 방지
 
 //로딩화면
+/*
 window.addEventListener("load", () => {
   //로딩속도 구현
   setTimeout(() => {
@@ -24,6 +25,7 @@ window.addEventListener("load", () => {
     }, 400);
   }, 3000);
 });
+*/
 
 //타이핑
 function typing() {
@@ -134,7 +136,6 @@ function profileOn() {
 }
 
 function skillsChart() {
-  var pfTop = $("#profile").offset().top;
   var skTop = $("#skill").offset().top;
   var scroll = document.documentElement.scrollTop;
 
@@ -163,16 +164,4 @@ $(document).ready(function () {
   skillsChart();
 });
 
-/*
-$(window).on({
-  "load":function() {
-    onScroll();
-  },
-  "resize":function(){
-    onScroll();
-  },
-  "scroll":function(){
-    onScroll();
-  }
-});
-*/
+
