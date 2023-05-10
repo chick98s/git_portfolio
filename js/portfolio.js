@@ -2,8 +2,8 @@ const html = document.querySelector("html");
 const body = document.querySelector("body");
 const loader = document.querySelector(".loading");
 
-const marker = document.querySelector(".marker");
-const items = document.querySelectorAll(".item");
+const indicator = document.querySelector(".nav-indicator");
+const items = document.querySelectorAll(".nav-item");
 
 const content = "PortFolio";
 const text = document.querySelector(".typing");
@@ -13,7 +13,6 @@ let i = 0;
 html.style.overflow = "hidden"; //로딩중 스크롤 방지
 
 //로딩화면
-/*
 window.addEventListener("load", () => {
   //로딩속도 구현
   setTimeout(() => {
@@ -25,7 +24,7 @@ window.addEventListener("load", () => {
     }, 400);
   }, 3000);
 });
-*/
+
 
 //타이핑
 function typing() {
@@ -74,22 +73,22 @@ function hasScrolled() {
   lastScrollTop = st;
 }
 
-//nav의 이벤트
+//nav의 인디케이터 이벤트
 function handleIndicator(el) {
-  items.forEach((item) => {
+  items.forEach(item => {
     item.classList.remove("is-active");
     item.removeAttribute("style");
   });
 
-  marker.style.width = "${el.offsetWidth}px";
-  marker.style.left = "${el.offsetLeft}px";
-  marker.style.backgroundColor = el.getAttribute("active-color");
+  indicator.style.width = "${el.offsetWidth}px";
+  indicator.style.left = "${el.offsetLeft}px";
+  indicator.style.backgroundColor = el.getAttribute("active-color");
 
   el.classList.add("is-active");
   el.style.color = el.getAttribute("active-color");
 }
 
-items.forEach((item) => {
+items.forEach((item, index) => {
   item.addEventListener("click", (e) => {
     handleIndicator(e.target);
   });
@@ -120,7 +119,7 @@ function onScroll() {
     var element_top_position = $element.offset().top;
     var element_bottom_position = element_top_position + element_height;
 
-    if (element_bottom_position >= window_top_position && element_top_position <= window_bottom_position) {
+    if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
       $element.addClass("active");
     } 
     else {
@@ -130,12 +129,16 @@ function onScroll() {
 }
 
 function profileOn() {
+  //profile의 좌표를 구함
   var pfTop = $("#profile").offset().top;
-  var scroll = document.documentElement.scrollTop;
+  //y축 방향으로 스크롤한 거리
+  var scroll = document.documentElement.scrollTop; 
+  //
   $("body")[scroll < pfTop ? "addClass" : "removeClass"]("top");
 }
 
 function skillsChart() {
+  var pfTop = $("#profile").offset().top;
   var skTop = $("#skill").offset().top;
   var scroll = document.documentElement.scrollTop;
 
@@ -159,9 +162,19 @@ function skillsChart() {
 }
 
 //jquery
-$(document).ready(function () {
-  profileOn();
+$(document).ready(function(){
   skillsChart();
 });
 
-
+$(window).on({
+  "load":function(){
+      onScroll();   
+  },
+  "resize":function(){
+      onScroll();    
+  },
+  "scroll":function(){
+      skillsChart();
+      onScroll();
+  }
+});
