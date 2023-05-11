@@ -576,12 +576,13 @@ figcaption {
     }
 
     .nav_toggle.active:hover {
-        filter: opacity(0.1) drop-shadow(0 0 0 #ff0000);
+        filter: opacity(0.1) drop-shadow(0 0 0 red);
     }
 
     .nav_icon {
         position: relative;
-        right: 0;
+        right: 20px;
+        bottom: 22px;
         width: 2rem;
         height: 1.4rem;
     }
@@ -590,7 +591,7 @@ figcaption {
         position: absolute;
         width: 100%;
         height: 0.1rem;
-        background-color: #000;
+        background-color: #fff;
         display: block;
         transition: all .3s ease-in-out;
     }
@@ -609,14 +610,12 @@ figcaption {
 
     /* 보여질 메뉴 */
     .nav {
-        width: 100%;
-        height: 100px;
+        width: 25%;
         display: none;
-        overflow: auto; 
 
         /* active가 되면 보여짐 */
-        background-color: #dce4f5;
-        opacity: 0.8;
+        margin: 0 auto;
+        font-size: 1rem;
     }
 
     .nav.active {
