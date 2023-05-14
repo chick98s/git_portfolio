@@ -152,7 +152,7 @@ a {
 #home {
     overflow: hidden;
     z-index: 200;
-    background-color: #A4907C;
+    background-color: #FFC107;
 }
 
 /* 타이핑 */
@@ -161,7 +161,7 @@ a {
     width: 100%;
     top: 300px;
     text-align: left;
-    color: #222222;
+    color: #343A40;
 }
 
 .intro_text {
@@ -177,7 +177,7 @@ a {
 
 @keyframes cursor {
     0% {
-        border-right: 2px solid #222222;
+        border-right: 2px solid #343A40;
     }
 
     50% {
@@ -185,7 +185,7 @@ a {
     }
 
     100% {
-        border-right: 2px solid #222222;
+        border-right: 2px solid #343A40;
     }
 }
 
@@ -225,15 +225,19 @@ a {
 }
 
 /* 스크롤 이벤트 */
-.onScroll { position: relative; }
+.onScroll {
+    position: relative;
+}
+
 .inUp {
     opacity: 0;
     filter: alpha(opacity=0);
     transition: all 2s ease-out;
-    -webkit-transition:all 2s ease-out;
+    -webkit-transition: all 2s ease-out;
     transform: translate3d(0px, 100px, 0px);
     backface-visibility: hidden;
 }
+
 .onScroll.active {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -242,6 +246,7 @@ a {
 
 #profile {
     background-image: url(../image/bg_profile.png);
+    background-repeat: no-repeat;
 }
 
 #profile .profile_wrap {
@@ -332,7 +337,7 @@ figcaption {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: #5A6B5D;
+    color: #fff;
     font-size: 1.2rem;
 }
 
@@ -352,6 +357,7 @@ figcaption {
 #skill {
     height: 80vh;
     background-image: url(../image/bg_skill.png);
+    background-size: cover;
 }
 
 #skill .c_list::after {
@@ -365,9 +371,15 @@ figcaption {
     top: 20px;
     float: left;
     font-size: 2.3rem;
+    font-weight: bold;
     width: 25%;
-    color: #222222;
+    color: #343A40;
     opacity: 0;
+}
+
+#skill.on .c_list li {
+    opacity: 1;
+    top: 0;
 }
 
 #skill .chart {
@@ -397,19 +409,14 @@ figcaption {
 
 #skill .c_list .txt {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: bold;
     display: block;
     text-align: center;
     margin-top: 90%;
 }
 
-#skill.on .c_list li {
-    opacity: 1;
-    top: 0;
-}
-
 #project {
-    background-color: #F1DEC9;
+    background: linear-gradient(45deg, #fff 30%, #E1E8EB 70%);
     height: 217vh;
 }
 
@@ -432,7 +439,7 @@ figcaption {
     display: block;
     width: 34px;
     height: 4px;
-    background-color: #A4907C;
+    background-color: #7952B3;
 }
 
 .pj_component {
@@ -509,7 +516,7 @@ figcaption {
     height: 200px;
     -webkit-transform: translate(72%, 45%);
     transform: translate(72%, 45%);
-    color: #F1DEC9;
+    color: #7952B3;
 }
 
 .pj_content h3 {
@@ -529,8 +536,8 @@ figcaption {
     height: 5rem;
     font-size: 1rem;
     text-align: center;
-    background: #A4907C;
-    color: #222222;
+    background: #E1E8EB;
+    color: #343A40;
     z-index: 201;
 }
 
@@ -541,8 +548,44 @@ figcaption {
     top: 15px;
 }
 
+@media screen and (max-width: 1399px) {
+    body {
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    /* section */
+    #home,
+    #profile {
+        position: relative;
+        height: 50vh;
+        min-height: 1000px;
+    }
+
+    /* 타이핑 */
+    .intro {
+        top: 250px;
+    }
+
+    #skill .c_list {
+        margin-top: -110px;
+    }
+
+    #project {
+        height: 280vh;
+    }
+
+    /* FOOTER */
+    #footer {
+        position: relative;
+        width: 100%;
+    }
+}
+
 /* 작아질 경우 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
+
     /* 모바일 수평 스크롤 금지 */
     html,
     body {
@@ -719,7 +762,7 @@ figcaption {
 
     /* 스킬 */
     #skill {
-        background-image: url(../image/mb_skill.png);
+        background-image: url(../image/bg_skill.png);
     }
 
     #skill .c_list {
@@ -766,7 +809,7 @@ figcaption {
     .pj_content ul {
         font-size: 1.2rem;
     }
-    
+
     #footer p {
         top: 15px;
     }
