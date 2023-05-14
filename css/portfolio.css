@@ -555,17 +555,22 @@ figcaption {
         overflow-x: hidden;
     }
 
-    /* section */
-    #home,
-    #profile {
-        position: relative;
-        height: 50vh;
-        min-height: 1000px;
+    #home {
+        height: 60vh;
     }
 
     /* 타이핑 */
     .intro {
         top: 250px;
+    }
+
+    .intro_text {
+        font-size: 5rem;
+    }
+
+    /* 타이핑 */
+    .typing {
+        font-size: 5rem;
     }
 
     #skill .c_list {
