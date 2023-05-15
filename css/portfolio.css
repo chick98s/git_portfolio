@@ -65,6 +65,7 @@ a {
 #header {
     position: fixed;
     width: 80%;
+    height: 80px;
     left: 0;
     right: 0;
     top: 15px;
@@ -84,8 +85,8 @@ a {
 
 .logo {
     position: relative;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     display: block;
     margin: 0 auto;
     background-image: url(../image/logo.png);
@@ -102,7 +103,8 @@ a {
     position: relative;
     overflow: hidden;
     max-width: 100%;
-    padding: 0 20px;
+    height: 60px;
+    margin: -8px 20px;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 40px;
@@ -111,9 +113,9 @@ a {
 .item {
     position: relative;
     color: #fff;
-    padding: 25px;
     transition: .3s;
-    margin: 0 15px;
+    padding: 0 25px;
+    margin: 4px 15px;
     z-index: 1;
 }
 
@@ -121,11 +123,10 @@ a {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -5px;
     width: 100%;
     height: 5px;
     background-color: #dfe2ea;
-    border: 1px solid #a8a7a7;
     border-radius: 8px 8px 0 0;
     opacity: 0;
     transition: .3s;
@@ -555,13 +556,14 @@ figcaption {
         overflow-x: hidden;
     }
 
+    /* section */
     #home {
-        height: 60vh;
+        min-height: 700px;
     }
 
     /* 타이핑 */
     .intro {
-        top: 250px;
+        top: 200px;
     }
 
     .intro_text {
@@ -571,6 +573,23 @@ figcaption {
     /* 타이핑 */
     .typing {
         font-size: 5rem;
+    }
+
+    @keyframes hm_ball {
+        0% {
+            right: -620px;
+            bottom: -150px;
+        }
+    
+        50% {
+            right: -660px;
+            bottom: -185px;
+        }
+    
+        100% {
+            right: -700px;
+            bottom: -220px;
+        }
     }
 
     #skill .c_list {
