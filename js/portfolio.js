@@ -1,13 +1,13 @@
+//javascript
 const html = document.querySelector("html");
 const body = document.querySelector("body");
-const loader = document.querySelector(".loading");
+const Header = document.querySelector("header");
 
-const indicator = document.querySelector(".nav-indicator");
-const items = document.querySelectorAll(".nav-item");
+const loader = document.querySelector(".loading");
+const items = document.querySelectorAll(".item");
 
 const content = "PortFolio";
 const text = document.querySelector(".typing");
-const project = document.querySelectorAll(".project");
 
 let i = 0;
 html.style.overflow = "hidden"; //로딩중 스크롤 방지
@@ -25,7 +25,6 @@ window.addEventListener("load", () => {
   }, 3000);
 });
 
-
 //타이핑
 function typing() {
   if (i < content.length) {
@@ -37,62 +36,31 @@ function typing() {
 setInterval(typing, 300);
 
 //헤더 스크롤 이벤트
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5; //동작의 구현이 시작되는 위치
-var navbarHeight = $("header").outerHeight();
-
-$(window).scroll(function (event) {
-  didScroll = true;
+document.addEventListener('scroll', function(){
+  let scroll = window.scrollY;
+  if(scroll > 50) {
+    Header.classList.add('active');
+  }
+  else {
+    Header.classList.remove('active');
+  }
 });
 
-setInterval(function () {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
-
-//동작을 구현
-function hasScrolled() {
-  var st = $(this).scrollTop();
-
-  if (Math.abs(lastScrollTop - st) <= delta) {
-    return;
-  }
-
-  if (st > lastScrollTop && st > navbarHeight) {
-    //스크롤 down
-    $("header").removeClass("nav-down").addClass("nav-up");
-  } else {
-    //스크롤 up
-    if (st + $(window).height() < $(document).height()) {
-      $("header").removeClass("nav-up").addClass("nav-down");
-    }
-  }
-  lastScrollTop = st;
-}
-
-//nav의 인디케이터 이벤트
+//nav의 메뉴 색상 이벤트
 function handleIndicator(el) {
   items.forEach(item => {
     item.classList.remove("is-active");
     item.removeAttribute("style");
   });
 
-  indicator.style.width = "${el.offsetWidth}px";
-  indicator.style.left = "${el.offsetLeft}px";
-  indicator.style.backgroundColor = el.getAttribute("active-color");
-
   el.classList.add("is-active");
-  el.style.color = el.getAttribute("active-color");
+  el.style.color = el.getAttribute('active-color');
 }
 
 items.forEach((item, index) => {
-  item.addEventListener("click", (e) => {
-    handleIndicator(e.target);
-  });
-  item.classList.contains("is-active") && handleIndicator(item);
+  item.addEventListener('click', (e) => {
+    handleIndicator(e.target)});
+  item.classList.contains('is-active') && handleIndicator(item);
 });
 
 //토글메뉴
@@ -100,7 +68,7 @@ function tgMenu() {
   let tgmenu = document.querySelector(".nav_toggle");
   tgmenu.classList.toggle("active");
 
-  let menu = document.querySelector("#nav");
+  let menu = document.querySelector(".nav");
   menu.classList.toggle("active");
 }
 
@@ -133,7 +101,6 @@ function profileOn() {
   var pfTop = $("#profile").offset().top;
   //y축 방향으로 스크롤한 거리
   var scroll = document.documentElement.scrollTop; 
-  //
   $("body")[scroll < pfTop ? "addClass" : "removeClass"]("top");
 }
 
@@ -162,19 +129,17 @@ function skillsChart() {
 }
 
 //jquery
-$(document).ready(function(){
-  skillsChart();
-});
-
-$(window).on({
-  "load":function(){
-      onScroll();   
-  },
-  "resize":function(){
-      onScroll();    
-  },
-  "scroll":function(){
+$(function () {
+  $(window).on({
+    load: function () {
+      onScroll();
+    },
+    resize: function () {
+      onScroll();
+    },
+    scroll: function () {
       skillsChart();
       onScroll();
-  }
+    },
+  });
 });
