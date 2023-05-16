@@ -649,7 +649,7 @@ figcaption {
     .nav_icon {
         position: relative;
         right: 20px;
-        bottom: 22px;
+        bottom: 5px;
         width: 2rem;
         height: 1.4rem;
     }
@@ -677,18 +677,22 @@ figcaption {
 
     /* 보여질 메뉴 */
     .nav {
-        width: 25%;
+        width: 80%;
+        height: 150px;
         display: none;
+        border-radius: 0;
 
         /* active가 되면 보여짐 */
         margin: 0 auto;
         font-size: 1rem;
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .nav.active {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 48px;
     }
 
     /* 원 애니메이션 */
