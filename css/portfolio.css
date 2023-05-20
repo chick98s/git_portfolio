@@ -428,7 +428,7 @@ figcaption {
     font-size: 2em;
     line-height: 1.6;
     margin-bottom: 54px;
-    color: #222222;
+    color: #fff;
 }
 
 .category-title::after {
