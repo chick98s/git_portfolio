@@ -306,7 +306,7 @@ a {
     left: 10%;
 }
 
-figure:hover p {
+figure:hover figcaption {
     opacity: 1;
     visibility: visible;
 }
@@ -329,7 +329,7 @@ figcaption {
 }
 
 #profile .skills h3 {
-    color: #222222;
+    color: rgba(56, 126, 206);
     font-size: 3rem;
 }
 
@@ -349,7 +349,7 @@ figcaption {
 }
 
 #profile .skill_list>li h4 {
-    color: #222222;
+    color: rgba(56, 126, 206);
     font-size: 2.6rem;
     padding-bottom: 10px;
     position: relative;
