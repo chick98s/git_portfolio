@@ -35,6 +35,11 @@ a {
     color: inherit;
 }
 
+/* 웹 접근성을 위해 */
+h6 {
+    display: none;
+}
+
 /* Loading */
 .loading {
     position: fixed;
