@@ -32,7 +32,6 @@ ul {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 /* 웹 접근성을 위해 */
@@ -55,10 +54,9 @@ h6 {
 
 .loading img {
     position: absolute;
-    top: 40%;
-    left: 45%;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
+    transform: translate(210%, 100%);
 }
 
 .inner {
@@ -137,8 +135,13 @@ h6 {
     transition: .3s;
 }
 
+.item.active {
+    color: red;
+}
+
+/* nav 밑줄*/
 .item:not(.is-active):hover {
-    color: #bdbcbc;
+    color: #3f3d3d;
     font-weight: bold;
 }
 
@@ -146,6 +149,7 @@ h6 {
     bottom: 0;
     opacity: 1;
 }
+
 
 /* section */
 #home,
@@ -254,7 +258,7 @@ h6 {
     background-color: #E3CCAE;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 1px solid rgba(0,0,0,0.25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 #profile .semo {
@@ -267,15 +271,16 @@ h6 {
     border-bottom: 120px solid transparent;
     border-left: 120px solid transparent;
     border-right: 120px solid #FFF2CC;
-    box-shadow: 0 0 28px rgba(0,0,0,0.22);
-    transform: rotate(90deg); /* 회전 */
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.22);
+    transform: rotate(90deg);
+    /* 회전 */
 }
 
 #profile .profile_wrap {
     display: flex;
     position: relative;
     bottom: 150px;
-    box-shadow: 0 0 28px rgba(0,0,0,0.22);
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.22);
 }
 
 #profile article figure {
@@ -303,14 +308,15 @@ h6 {
     background-color: #FFF2CC;
     word-wrap: break-word;
     color: #000;
-    border: 1px solid rgba(0,0,0,0.22);
+    border: 1px solid rgba(0, 0, 0, 0.22);
     text-align: center;
     font-size: 18px;
     padding: 20px;
     opacity: 0;
     transition: all 0.5s ease-in;
     border-radius: 15px;
-    visibility: hidden; /* 특정 요소 접촉 시 이벤트 발생 */
+    visibility: hidden;
+    /* 특정 요소 접촉 시 이벤트 발생 */
     z-index: 15;
 }
 
@@ -318,7 +324,7 @@ h6 {
     content: '';
     position: absolute;
     background-color: #FFF2CC;
-    border: 1px rgba(0,0,0,0.22);
+    border: 1px rgba(0, 0, 0, 0.22);
     border-style: solid none none solid;
     width: 10px;
     height: 10px;
@@ -327,7 +333,7 @@ h6 {
     left: 10%;
 }
 
-figure img:hover + .arrow_txt p {
+figure img:hover+.arrow_txt p {
     opacity: 1;
     visibility: visible;
 }
@@ -336,7 +342,7 @@ figure img:hover + .arrow_txt p {
     position: absolute;
     width: 60%;
     top: -7%;
-    left: 43%; 
+    left: 43%;
     padding-top: 80px;
 }
 
@@ -596,12 +602,12 @@ figure img:hover + .arrow_txt p {
             right: -620px;
             bottom: -150px;
         }
-    
+
         50% {
             right: -660px;
             bottom: -185px;
         }
-    
+
         100% {
             right: -700px;
             bottom: -220px;
@@ -634,8 +640,9 @@ figure img:hover + .arrow_txt p {
     }
 
     .loading img {
-        top: 40%;
-        left: 30%;
+        width: 100px;
+        height: 100px;
+        transform: translate(140%, 340%);
     }
 
     #header {
