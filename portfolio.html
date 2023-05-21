@@ -4,7 +4,7 @@
 <head lang="ko">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
 
     <meta property="og:url" content="//chick98s.github.io/git_portfolio/portfolio.html">
     <meta property="og:title" content="최소연_포트폴리오">
@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="./css/portfolio.css">
 
     <title>포트폴리오</title>
+
+    <!--타이틀 이미지-->
+    <link href="./image/logo.png" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
@@ -34,7 +37,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                </span>               
+                </span>
             </button>
 
             <!-- nav -->
@@ -42,7 +45,7 @@
                 <a href="#home" class="item is-active" active-color="#FFC107">Home</a>
                 <a href="#profile" class="item" active-color="rgba(56, 126, 206)">Profile</a>
                 <a href="#skill" class="item" active-color="#EC2027">Skill</a>
-                <a href="#project" class="item" active-color="#5f2bac">Project</a>  
+                <a href="#project" class="item" active-color="#5f2bac">Project</a>
             </nav>
         </header>
 
@@ -64,20 +67,22 @@
             <section id="profile">
                 <div class="inner">
                     <h2 class="category-title">PROFILE</h2>
+                    <!--모서리-->
+                    <div class="semo"></div>
                     <div class="profile_wrap">
                         <article>
                             <figure>
-                                <img src="./image/sy.jpg" alt="프로필_이미지"/>
-                                <figcaption>▼</figcaption>
+                                <img src="./image/sy.jpg" alt="프로필_이미지" />
+
+                                <!--말풍선-->
+                                <div class="arrow_txt">
+                                    <p>
+                                        안녕하세요! 저는 제가 직접 작성한 코드가 그림처럼 그려지는 것에
+                                        흥미를 느껴서 꿈을 가지게 되었습니다. 아직 부족한 부분도 있지만
+                                        적극적으로 배우고 끈질기게 도전하여 하루하루 발전하는 <b>웹 퍼블리셔</b>가 되겠습니다.
+                                    </p>
+                                </div>
                             </figure>
-                            
-                            <div class="arrow_txt">
-                                <p>
-                                    안녕하세요! 저는 제가 직접 작성한 코드가 그림처럼 그려지는 것에
-                                    흥미를 느껴서 꿈을 가지게 되었습니다. 아직 부족한 부분도 있지만
-                                    적극적으로 배우고 끈질기게 도전하여 하루하루 발전하는 <b>웹 퍼블리셔</b>가 되겠습니다.
-                                </p>
-                            </div>
                         </article>
 
                         <article class="skills onScroll inUp">
@@ -174,7 +179,7 @@
                                         &#8599; 페이지로 가기
                                     </span>
                                 </div>
-                                <img class="project_img" src="./image/cyworld_img.png" alt="싸이월드_페이지"/>
+                                <img class="project_img" src="./image/cyworld_img.png" alt="싸이월드_페이지" />
                             </a>
                         </figure>
 
@@ -197,7 +202,7 @@
                                         &#8599; 페이지로 가기
                                     </span>
                                 </div>
-                                <img class="project_img" src="./image/song_img.png" alt="뮤직_페이지"/>
+                                <img class="project_img" src="./image/song_img.png" alt="뮤직_페이지" />
                             </a>
                         </figure>
 
@@ -219,7 +224,7 @@
                                         &#8599; 페이지로 가기
                                     </span>
                                 </div>
-                                <img class="project_img" src="./image/cafe_img.png" alt="카페_페이지"/>
+                                <img class="project_img" src="./image/cafe_img.png" alt="카페_페이지" />
                             </a>
                         </figure>
 
@@ -242,7 +247,7 @@
                                         &#8599; 페이지로 가기
                                     </span>
                                 </div>
-                                <img class="project_img" src="./image/pf_img.png" alt="포트폴리오_페이지"/>
+                                <img class="project_img" src="./image/pf_img.png" alt="포트폴리오_페이지" />
                             </a>
                         </figure>
 
@@ -270,4 +275,5 @@
 
     <script src="./js/portfolio.js"></script>
 </body>
+
 </html>
