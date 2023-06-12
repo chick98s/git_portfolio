@@ -6,7 +6,7 @@ const Header = document.querySelector("header");
 const loader = document.querySelector(".loading");
 const items = document.querySelectorAll(".item");
 
-const content = "PortFolio";
+const content = "PortFolio\u00A0";
 const text = document.querySelector(".typing");
 
 let i = 0;
@@ -35,20 +35,9 @@ function typing() {
 }
 setInterval(typing, 300);
 
-//헤더 스크롤 이벤트
-document.addEventListener('scroll', function(){
-  let scroll = window.scrollY;
-  if(scroll > 50) {
-    Header.classList.add('active');
-  }
-  else {
-    Header.classList.remove('active');
-  }
-});
-
-//nav의 메뉴 색상 이벤트
+//nav의 메뉴 이벤트
 function handleIndicator(el) {
-  items.forEach(item => {
+  items.forEach((item) => {
     item.classList.remove("is-active");
     item.removeAttribute("style");
   });
@@ -57,15 +46,16 @@ function handleIndicator(el) {
 }
 
 items.forEach((item, index) => {
-  item.addEventListener('click', (e) => {
-    handleIndicator(e.target)});
-  item.classList.contains('is-active') && handleIndicator(item);
+  item.addEventListener("click", (e) => {
+    handleIndicator(e.target);
+  });
+  item.classList.contains("is-active") && handleIndicator(item);
 });
 
 //a태그 active 유지
-Array.prototype.forEach.call(items, function(elem){
-  elem.addEventListener("click", function(){
-    Array.prototype.forEach.call(items, function(elem){
+Array.prototype.forEach.call(items, function (elem) {
+  elem.addEventListener("click", function () {
+    Array.prototype.forEach.call(items, function (elem) {
       elem.classList.remove("active");
     });
     this.classList.add("active");
@@ -81,74 +71,58 @@ function tgMenu() {
   menu.classList.toggle("active");
 }
 
-//스크롤 이벤트
-function onScroll() {
-  var $animation_elements = $(".onScroll");
-  var $window = $(window);
-
-  var window_height = $window.height();
-  var window_top_position = $window.scrollTop();
-  var window_bottom_position = window_top_position + window_height;
-
-  $.each($animation_elements, function () {
-    var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = element_top_position + element_height;
-
-    if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
-      $element.addClass("active");
-    } 
-    else {
-      $element.removeClass("active");
-    }
-  });
-}
-
-function profileOn() {
-  //profile의 좌표를 구함
-  var pfTop = $("#profile").offset().top;
-  //y축 방향으로 스크롤한 거리
-  var scroll = document.documentElement.scrollTop; 
-  $("body")[scroll < pfTop ? "addClass" : "removeClass"]("top");
-}
-
-function skillsChart() {
-  var pfTop = $("#profile").offset().top;
-  var skTop = $("#skill").offset().top;
-  var scroll = document.documentElement.scrollTop;
-
-  $("#skill")[scroll > skTop - 500 ? "addClass" : "removeClass"]("on");
-
-  if (scroll > pfTop + 100) {
-    $(".chart").easyPieChart({
-      barColor: "#EC2027",
-      trackColor: "#ccc",
-      scaleColor: false,
-      lineCap: "round",
-      lineWidth: 20, //차트선 두께
-      size: 180, //차트크기
-      onStart: $.noop,
-      onStop: $.noop,
-      onStep: function (from, to, percent) {
-        $(this.el).find(".percent").text(Math.round(percent));
-      },
-    });
-  }
-}
-
-//jquery
 $(function () {
-  $(window).on({
-    load: function () {
-      onScroll();
-    },
-    resize: function () {
-      onScroll();
-    },
-    scroll: function () {
-      skillsChart();
-      onScroll();
-    },
+  //헤더 스크롤 이벤트
+  var lastScrollTop = 0,
+    delta = 15;
+  $(window).scroll(function (event) {
+    var st = $(this).scrollTop();
+
+    if (Math.abs(lastScrollTop - st) <= delta) return; // 스크롤값을 받아서 리턴한다.
+    if (st > lastScrollTop && lastScrollTop > 0) {
+      // scroll down
+      $("#header").css("top", "-80px"); // 스크롤을 내렸을때 #header의 CSS 속성중 top 값을 -80px로 변경한다.
+    } else {
+      // scroll up
+      $("#header").css("top", "0px"); // 스크롤을 올렸을때 #header의 CSS 속성중 top 값을 0px로 변경한다.
+    }
+    lastScrollTop = st;
+  });
+
+  //skill 버튼
+  $(".skills li:eq(0)").click(function (e) {
+    $(".s_li:eq(0)").show();
+
+    $(".s_li:eq(1)").hide();
+    $(".s_li:eq(2)").hide();
+    $(".s_li:eq(3)").hide();
+    e.preventDefault();
+  });
+
+  $(".skills li:eq(1)").click(function (e) {
+    $(".s_li:eq(1)").show();
+
+    $(".s_li:eq(0)").hide();
+    $(".s_li:eq(2)").hide();
+    $(".s_li:eq(3)").hide();
+    e.preventDefault();
+  });
+
+  $(".skills li:eq(2)").click(function (e) {
+    $(".s_li:eq(2)").show();
+
+    $(".s_li:eq(0)").hide();
+    $(".s_li:eq(1)").hide();
+    $(".s_li:eq(3)").hide();
+    e.preventDefault();
+  });
+
+  $(".skills li:eq(3)").click(function (e) {
+    $(".s_li:eq(3)").show();
+
+    $(".s_li:eq(0)").hide();
+    $(".s_li:eq(1)").hide();
+    $(".s_li:eq(2)").hide();
+    e.preventDefault();
   });
 });
