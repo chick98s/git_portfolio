@@ -1,25 +1,24 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    position: relative;
-    font-family: 'Hahmlet', serif;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Cherry Bomb One';
+    overflow: hidden;
+}
+
 body::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-    border: 1px solid #fff;
     border-radius: 40px;
-    background-color: #222222;
+    background-color: #ccc;
 }
 
 body::-webkit-scrollbar-track {
@@ -31,12 +30,8 @@ ul {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
-}
-
-/* 웹 접근성을 위해 */
-h6 {
-    display: none;
 }
 
 /* Loading */
@@ -48,53 +43,32 @@ h6 {
     height: 100%;
     background: rgba(0, 0, 0, 0.78);
     z-index: 999;
-    opacity: 1;
-    transition: 0.5s ease;
 }
 
 .loading img {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    transform: translate(210%, 100%);
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.inner {
-    max-width: 1024px;
-    margin: 0 auto;
+#wrap {
+    width: 100%;
+    text-align: center;
 }
 
 /* header */
 #header {
     position: fixed;
-    width: 80%;
+    width: 100%;
     height: 80px;
     left: 0;
     right: 0;
-    top: 15px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 80px;
-    background: rgba(0, 0, 0, 0.5);
-    transition: top 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease;
     z-index: 300;
-}
-
-#header.active {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.logo {
-    position: relative;
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    margin: 0 auto;
-    background-image: url(../image/logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 .nav_toggle {
@@ -103,14 +77,16 @@ h6 {
 
 .nav {
     display: inline-flex;
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-    height: 60px;
-    margin: -8px 20px;
+    float: right;
+    align-items: center;
+    height: auto;
+    padding: 25px;
     font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 40px;
+}
+
+.nav-up {
+    top: -40px;
 }
 
 .item {
@@ -118,21 +94,8 @@ h6 {
     color: #fff;
     transition: .3s;
     padding: 0 25px;
-    margin: 4px 15px;
+    font-family: roboto;
     z-index: 1;
-}
-
-.item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 5px;
-    background-color: #dfe2ea;
-    border-radius: 8px 8px 0 0;
-    opacity: 0;
-    transition: .3s;
 }
 
 .item.active {
@@ -141,7 +104,7 @@ h6 {
 
 /* nav 밑줄*/
 .item:not(.is-active):hover {
-    color: #3f3d3d;
+    color: green;
     font-weight: bold;
 }
 
@@ -150,28 +113,19 @@ h6 {
     opacity: 1;
 }
 
-
-/* section */
-#home,
-#profile {
-    position: relative;
-    height: 100vh;
-    min-height: 1000px;
-}
-
 #home {
+    height: 100vh;
     overflow: hidden;
-    z-index: 200;
-    background-color: #FFC107;
+    background-color: #222222;
 }
 
 /* 타이핑 */
 .intro {
     position: relative;
-    width: 100%;
-    top: 300px;
-    text-align: left;
-    color: #343A40;
+    width: auto;
+    top: 150px;
+    display: inline-block;
+    color: #fff;
 }
 
 .intro_text {
@@ -180,274 +134,81 @@ h6 {
 
 /* 타이핑 */
 .typing {
+    color: #000;
     font-size: 6rem;
+    -webkit-text-stroke: 2px white;
     animation: cursor .5s infinite;
-    -webkit-animation: cursor .5s infinite;
+    -webkit-animation: cursor .8s infinite;
 }
 
 @keyframes cursor {
     0% {
-        border-right: 2px solid #343A40;
+        border-right: 7px dotted red;
     }
 
     50% {
-        border-right: 2px solid #ffffff;
+        border-right: 7px dotted green;
     }
 
     100% {
-        border-right: 2px solid #343A40;
+        border-right: 7px dotted red;
     }
 }
 
-.intro h1 {
-    font-size: 1.5rem;
-}
-
-/* 원 애니메이션 */
-.ball {
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    background-color: #000;
-}
-
-#home .ball {
-    opacity: 0.07;
+.box {
     position: relative;
-    animation: hm_ball 3s linear infinite alternate;
-}
-
-@keyframes hm_ball {
-    0% {
-        right: -620px;
-        bottom: -250px;
-    }
-
-    50% {
-        right: -660px;
-        bottom: -265px;
-    }
-
-    100% {
-        right: -700px;
-        bottom: -320px;
-    }
-}
-
-/* 스크롤 이벤트 */
-.onScroll {
-    position: relative;
-}
-
-.inUp {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    transition: all 2s ease-out;
-    -webkit-transition: all 2s ease-out;
-    transform: translate3d(0px, 100px, 0px);
-    backface-visibility: hidden;
-}
-
-.onScroll.active {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    transform: translate3d(0px, 0px, 0px);
-}
-
-#profile {
-    background-color: #E3CCAE;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-#profile .semo {
-    position: relative;
-    width: 0;
-    height: 0;
-    top: -105px;
-    left: -27.3%;
-    border-top: 120px solid #FFF2CC;
-    border-bottom: 120px solid transparent;
-    border-left: 120px solid transparent;
-    border-right: 120px solid #FFF2CC;
-    box-shadow: 0 0 28px rgba(0, 0, 0, 0.22);
-    transform: rotate(90deg);
-    /* 회전 */
-}
-
-#profile .profile_wrap {
-    display: flex;
-    position: relative;
-    bottom: 150px;
-    box-shadow: 0 0 28px rgba(0, 0, 0, 0.22);
-}
-
-#profile article figure {
-    padding-top: 5px;
-}
-
-#profile figure img {
-    width: 400px;
-    height: 600px;
-    border-radius: 15px 15px 0 0;
+    width: 100px;
+    height: 100px;
+    top: 30%;
     display: inline-block;
-    cursor: pointer;
-    z-index: 5;
-}
-
-/* 프로필 말풍선 */
-.arrow_txt {
-    position: absolute;
-    width: 500px;
-    height: 100px;
-    margin: 25px 0;
-}
-
-.arrow_txt p {
-    background-color: #FFF2CC;
-    word-wrap: break-word;
-    color: #000;
-    border: 1px solid rgba(0, 0, 0, 0.22);
     text-align: center;
-    font-size: 18px;
-    padding: 20px;
-    opacity: 0;
-    transition: all 0.5s ease-in;
-    border-radius: 15px;
-    visibility: hidden;
-    /* 특정 요소 접촉 시 이벤트 발생 */
-    z-index: 15;
+    background: #ccc;
+    border: 1px solid #ccc;
+    margin-right: 100px;
+    perspective-origin: center;
+    text-align: center;
 }
 
-.arrow_txt p::after {
-    content: '';
+.transform {
     position: absolute;
-    background-color: #FFF2CC;
-    border: 1px rgba(0, 0, 0, 0.22);
-    border-style: solid none none solid;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg) translateX(-50%);
-    top: -2px;
-    left: 10%;
-}
-
-figure img:hover+.arrow_txt p {
-    opacity: 1;
-    visibility: visible;
-}
-
-#profile .skills {
-    position: absolute;
-    width: 60%;
-    top: -7%;
-    left: 43%;
-    padding-top: 80px;
-}
-
-#profile .skills h3 {
-    color: rgba(56, 126, 206);
-    font-size: 3rem;
-}
-
-#profile .skill_list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: #000;
-    font-size: 1.2rem;
-}
-
-#profile .skill_list>li {
-    width: 47%;
-    margin-top: 50px;
-    padding-bottom: 30px;
-}
-
-#profile .skill_list>li h4 {
-    color: rgba(56, 126, 206);
-    font-size: 2.6rem;
-    padding-bottom: 10px;
-    position: relative;
-}
-
-#skill {
-    height: 80vh;
-    background-image: url(../image/bg_skill.png);
-    background-size: cover;
-}
-
-#skill .c_list::after {
-    clear: both;
-    content: '';
-    display: block;
-}
-
-#skill .c_list li {
-    position: relative;
-    top: 20px;
-    float: left;
-    font-size: 2.3rem;
-    font-weight: bold;
-    width: 25%;
-    color: #343A40;
-    text-shadow: -1px -1px 0 #fff, 2px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-    opacity: 0;
-}
-
-#skill.on .c_list li {
-    opacity: 1;
     top: 0;
-}
-
-#skill .chart {
-    position: relative;
-    width: 100%;
+    left: 0;
+    width: 100px;
     height: 100px;
-    display: table;
+    background: #444;
 }
 
-#skill .c_list .percent {
-    position: absolute;
-    top: 140%;
-    left: 52%;
-    transform: translate(-50%, 120%);
+.box .transform {
+    transform: rotateX(45deg);
 }
 
-#skill .c_list .percent::after {
-    content: '%';
+.box1 {
+    width: 100%;
+    height: 150px;
+    perspective: 100px;
 }
 
-#skill canvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+.box1 .transform {
+    width: 100px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
 }
 
-#skill .c_list .txt {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: block;
-    text-align: center;
-    margin-top: 90%;
-}
-
-#project {
-    background: linear-gradient(45deg, #fff 30%, #E1E8EB 70%);
-    height: 217vh;
+.box1.box2 {
+    perspective: 300px;
 }
 
 .category-title {
     position: relative;
     text-align: center;
+    font-family: roboto;
     margin: 0 auto;
     font-size: 2em;
     line-height: 1.6;
     margin-bottom: 54px;
-    color: #7952B3;
+    color: red;
+    -webkit-text-stroke: 2px black;
 }
 
 .category-title::after {
@@ -460,415 +221,357 @@ figure img:hover+.arrow_txt p {
     width: 34px;
     height: 4px;
     border: 1px solid black;
-    background-color: #fff;
+    background-color: #ccc;
 }
 
-.pj_component {
-    height: 350px;
-    background: rgba(0, 0, 0, 0.78);
-    border: 1px solid #fff;
-    border-radius: 16px;
+#profile {
+    height: 115vh;
+    background-color: #444;
+}
 
-    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
+.img_box {
+    position: relative;
+    top: 15%;
+    width: 400px;
+    height: 400px;
+    margin: 40px;
+    word-break: break-all;
+    color: #000;
+    border: 2px solid #1b2431;
+    background-color: #ccc;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+}
 
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
+.pf_img {
+    width: 400px;
+    height: 400px;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+    transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+}
 
+.pf_img:hover {
+    transform: translateX(-100px) translate(-270px);
+    -webkit-transform: translateX(-100px) translate(-270px);
+}
+
+/* 프로필 텍스트 */
+.pf_txt {
+    position: absolute;
+    top: 142%;
+    left: 5%;
+    width: 310px;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    opacity: 0;
+    transition: .8s ease-in;
+    border-radius: 15px;
+}
+
+.img_box:hover + .pf_txt {
     opacity: 1;
 }
 
-.pj_component:not(:last-child) {
-    margin-bottom: 55px;
-}
-
-.project_box {
-    float: left;
-}
-
-.pj_thumbnail {
-    display: block;
+.panel {
     position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+    left: 40%;
+    bottom: 15%;
+    margin: 20px 25px;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+    border-radius: 50%;
+    background-color: #1b2431;
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.front p {
+    margin-top: 40%;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+.back {
+    z-index: 1;
+    transform: rotateY(-180deg);
+}
+
+.back li {
+    margin-top: 20%;
+    font-size: 1.1rem;
+    font-family: roboto;
+}
+
+.panel:hover .front {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.panel:hover .back {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+#skill {
+    display: inline-block;
+    width: 100%;
+    height: 50vw;
+    background-color: #1b2431;
+}
+
+/* 스킬 메뉴 */
+.skillview .skills {
+    position: absolute;
+    left: 8%;
+    transform: translateY(30%);
+    z-index: 1;
+}
+
+.skills li {
+    width: 80px;
+    height: 80px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
-    width: 25rem;
-    height: 15.625rem;
-    margin: 3rem;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    backdrop-filter: blur(4px);
+}
+
+.skills li img {
+    width: 70%;
+    height: 70%;
+    transition: 0.5s;
+}
+
+.skills li:hover img {
+    transform: rotate(-35deg);
+}
+/***스킬 메뉴***/
+
+.boxskill {
+    position: relative;
+    top: 15%;
+    right: 0;
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    padding: 60px 20px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.s_list .s_li {
+    display: none;
+    letter-spacing: 1;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 30px;
+}
+
+.s_li img {
+    height: 250px;
+}
+
+.s_list .s_li:nth-child(1) {
+    display: block;
+}
+
+.s_list .s_li.on {
+    display: block;
+}
+
+.s_list .s_li .skilloption {
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    padding: 24px 10px 18px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
     overflow: hidden;
+    transition: 0.5s;
+}
+
+.s_li .skilloption::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.s_li .skilloption .skillname {
+    position: relative;
+    width: 110px;
+    text-align: right;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+li .skilloption .value {
+    position: relative;
+    text-align: left;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+li .skilloption .percent {
+    position: relative;
+    width: calc(100% - -200px);
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #151515;
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;
+}
+
+li .skilloption .percent .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ffcb1f, #673ab7);
+    box-shadow: inset 0 0 2px #000;
+}
+
+li .skilloption .percent .progress.on {
+    animation: skillbar 2s ease-in-out forwards;
+}
+
+@keyframes skillbar {
+    from {
+        width: 0;
+    }
+}
+
+#project {
+    background-color: #222222;
+    height: auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px !important;
+}
+
+.swiper-slide {
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    width: 400px !important;
+    height: 410px !important;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
 }
 
 .project_img {
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 
-.project_box:hover .hv_caption {
-    opacity: 1;
-}
-
-.hv_caption {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-
-    width: 100%;
-    height: 100%;
+.swiper-slide span {
+    position: relative;
+    top: 8%;
     color: #000;
-    opacity: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    vertical-align: middle;
-}
-
-.hv_caption>.caption {
-    display: inline-block;
-    font-size: 1em;
-    height: 1.1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.pj_content {
-    position: absolute;
-    width: 680px;
-    height: 200px;
-    -webkit-transform: translate(72%, 45%);
-    transform: translate(72%, 45%);
-    color: #ffffff;
-    text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.pj_content h3 {
-    font-size: 2.5rem;
-}
-
-.pj_content ul {
-    margin: 35px 0;
-    font-size: 1.4rem;
     font-weight: bold;
-    line-height: 1.5;
+    font-size: 2rem;
 }
 
 /* FOOTER */
 #footer {
     width: 100%;
-    height: 5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    background: #E1E8EB;
-    color: #343A40;
-    z-index: 201;
+    height: auto;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 30px;
+    background-color: #222222;
 }
 
 #footer p {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    top: 15px;
+    width: auto;
+    display: inline-block;
+    text-align: center;
 }
 
-@media screen and (max-width: 1399px) {
-    body {
-        position: relative;
-        height: 100%;
-        overflow-x: hidden;
-    }
-
-    /* section */
+@media (max-width: 1300px) {
     #home {
-        min-height: 700px;
-    }
-
-    /* 타이핑 */
-    .intro {
-        top: 200px;
-    }
-
-    .intro_text {
-        font-size: 5rem;
-    }
-
-    /* 타이핑 */
-    .typing {
-        font-size: 5rem;
-    }
-
-    @keyframes hm_ball {
-        0% {
-            right: -620px;
-            bottom: -150px;
-        }
-
-        50% {
-            right: -660px;
-            bottom: -185px;
-        }
-
-        100% {
-            right: -700px;
-            bottom: -220px;
-        }
-    }
-
-    #skill .c_list {
-        margin-top: -110px;
-    }
-
-    #project {
-        height: 280vh;
-    }
-
-    /* FOOTER */
-    #footer {
-        position: relative;
-        width: 100%;
-    }
-}
-
-/* 작아질 경우 */
-@media screen and (min-width: 320px) and (max-width: 800px) {
-
-    /* 모바일 수평 스크롤 금지 */
-    html,
-    body {
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .loading img {
-        width: 100px;
-        height: 100px;
-        transform: translate(140%, 340%);
-    }
-
-    #header {
-        width: 100%;
-    }
-
-    /* 햄버거 메뉴 */
-    .nav_toggle {
-        position: relative;
-        width: 38px;
-        float: right;
-        display: block;
-        border: none;
-        background: none;
-    }
-
-    .nav_toggle.active {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nav_toggle.active:hover {
-        filter: opacity(0.1) drop-shadow(0 0 0 red);
-    }
-
-    .nav_icon {
-        position: absolute;
-        right: 20px;
-        top: -5px;
-        width: 2rem;
-        height: 1.4rem;
-    }
-
-    .nav_icon span {
-        position: absolute;
-        width: 100%;
-        height: 0.1rem;
-        background-color: #fff;
-        display: block;
-        transition: all .3s ease-in-out;
-    }
-
-    .nav_icon span:nth-of-type(1) {
-        top: 0;
-    }
-
-    .nav_icon span:nth-of-type(2) {
-        top: 45%;
-    }
-
-    .nav_icon span:nth-of-type(3) {
-        bottom: 0;
-    }
-
-    /* 보여질 메뉴 */
-    .nav {
-        width: 80%;
-        height: 150px;
-        display: none;
-        border-radius: 0;
-
-        /* active가 되면 보여짐 */
-        margin: 0 auto;
-        font-size: 1rem;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .nav.active {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 48px;
-    }
-
-    /* 원 애니메이션 */
-    .ball {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background-color: #000;
-    }
-
-    @keyframes hm_ball {
-        0% {
-            right: -120px;
-            bottom: -440px;
-        }
-
-        50% {
-            right: -160px;
-            bottom: -475px;
-        }
-
-        100% {
-            right: -180px;
-            bottom: -490px;
-        }
-    }
-
-    .intro {
-        top: 320px;
-        left: 15px;
-    }
-
-    .intro_text {
-        font-size: 2.8rem;
-    }
-
-    .intro h1 {
-        font-size: 1.6rem;
-    }
-
-    .typing {
-        font-size: 3rem;
+        height: 130vh;
     }
 
     #profile {
-        height: 120vh;
+        height: 130vh;
     }
 
-    #profile .semo {
-        top: -105px;
-        left: 0;
-        border-top: 20px solid #FFF2CC;
-        border-bottom: 20px solid transparent;
-        border-left: 20px solid transparent;
-        border-right: 20px solid #FFF2CC;
+    .img_box {
+        top: 10%;
+        width: 400px;
+        height: 400px;
     }
 
-    #profile .profile_wrap {
-        top: -40px;
-        height: 850px;
+    /* 프로필 텍스트 */
+    .pf_txt {
+        top: 175%;
+        left: 7%;
     }
-
-    #profile article figure img {
+    
+    .panel {
         width: 200px;
         height: 200px;
-        margin: 10% 45%;
-        border-radius: 50%;
+        left: 45%;
+        bottom: 27%;
     }
 
-    .arrow_txt {
-        width: 300px;
-        margin: 30% 5%;
-        z-index: 15;
-    }
-
-    .arrow_txt p {
-        width: 310px;
-        height: 115px;
-        font-size: 1rem;
-        text-size-adjust: auto;
-    }
-
-    #profile .skills {
-        position: absolute;
-        top: 22%;
-        width: 90%;
-        left: 5%;
-    }
-
-    #profile .skills h3 {
+    .front p {
         font-size: 2rem;
     }
 
-    #profile .skill_list>li {
-        padding-bottom: 20px;
-    }
-
-    #profile .skill_list>li h4 {
-        font-size: 1.5rem;
-        padding-bottom: 10px;
-    }
-
-    /* 스킬 */
-    #skill {
-        background-image: url(../image/bg_skill.png);
-    }
-
-    #skill .c_list {
-        margin-top: -30px;
-    }
-
-    #skill .c_list li {
-        width: 48%;
-        margin: -45px 3px;
-        font-size: 1.75rem;
-    }
-
-    #skill .c_list .txt {
+    .back li {
+        margin-top: 20%;
         font-size: 0.8rem;
     }
-
-    #project {
-        height: 270vh;
-    }
-
-    .pj_component {
-        width: 383px;
-        height: 130vw;
-        margin: 3% 0;
-    }
-
-    .pj_thumbnail {
-        width: 20rem;
-        margin: 20px 30px;
-    }
-
-    .pj_content {
-        width: 300px;
-        height: auto;
-        top: 45%;
-        margin: -3% -45%;
-        text-size-adjust: auto;
-    }
-
-    .pj_content h3 {
-        font-size: 2rem;
-    }
-
-    .pj_content ul {
-        font-size: 1.2rem;
-    }
-
-    #footer p {
-        top: 15px;
-    }
 }
+
+
+@media (max-width: 768px) {}
