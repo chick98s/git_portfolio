@@ -12,6 +12,7 @@
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="400">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./css/portfolio.css">
 
@@ -29,7 +30,13 @@
 
     <div id="wrap">
         <header id="header">
-            <div class="logo"></div>
+            <!-- nav -->
+            <nav class="nav" onclick="tgMenu();">
+                <a href="#home" class="item is-active">HOME</a>
+                <a href="#profile" class="item">PROFILE</a>
+                <a href="#skill" class="item">SKILLS</a>
+                <a href="#project" class="item">PROJECT</a>
+            </nav>
 
             <!-- 토글 버튼 -->
             <button class="nav_toggle" onclick="tgMenu();">
@@ -39,128 +46,153 @@
                     <span></span>
                 </span>
             </button>
-
-            <!-- nav -->
-            <nav class="nav" onclick="tgMenu();">
-                <a href="#home" class="item is-active">Home</a>
-                <a href="#profile" class="item">Profile</a>
-                <a href="#skill" class="item">Skill</a>
-                <a href="#project" class="item">Project</a>
-            </nav>
         </header>
 
         <main id="main">
             <!--HOME-->
             <section id="home">
-                <div class="inner">
-                    <div class="intro">
-                        <p class="intro_text">WELCOME TO MY</p>
-                        <span class="typing"></span>
-                        <h1>안녕하세요! 웹 퍼블리셔를 꿈꾸는 최소연입니다.</h1>
-                    </div>
+                <div class="intro">
+                    <p class="intro_text">WELCOME TO MY<br>
+                        <span class="typing"></span><br>
+                        <span style="font-size: 2rem; font-family: gordic, sans-serif;">
+                            안녕하세요! 웹 퍼블리셔를 꿈꾸는 최소연입니다.
+                        </span>
+                    </p>
+                </div>
 
-                    <div class="ball"></div>
+                <div class="box box1 box2">
+                    <div class="transform tran1"></div>
+                    <div class="transform tran2"></div>
+                    <div class="transform tran3"></div>
+                    <div class="transform tran4"></div>
+                    <div class="transform tran5"></div>
+                    <div class="transform tran6"></div>
+                    <div class="transform tran7"></div>
+                    <div class="transform tran8"></div>
                 </div>
             </section>
 
             <!--PROFILE-->
             <section id="profile">
-                <div class="inner">
-                    <h2 class="category-title">PROFILE</h2>
-                    <!--모서리-->
-                    <div class="semo"></div>
-                    <div class="profile_wrap">
-                        <article>
-                            <h6>1</h6>
-                            <figure>
-                                <img src="./image/sy.jpg" alt="프로필_이미지">
+                <h2 class="category-title">PROFILE</h2>
+                <div class="img_box">
+                    <img class="pf_img" src="./image/sy.jpg" alt="프로필_이미지">
+                </div>
 
-                                <!--말풍선-->
-                                <div class="arrow_txt">
-                                    <p>
-                                        안녕하세요! 저는 제가 직접 작성한 코드가 그림처럼 그려지는 것에
-                                        흥미를 느껴서 꿈을 가지게 되었습니다. 아직 부족한 부분도 있지만
-                                        적극적으로 배우고 끈질기게 도전하여 하루하루 발전하는 <b>웹 퍼블리셔</b>가 되겠습니다.
-                                    </p>
-                                </div>
-                            </figure>
-                        </article>
+                <p class="pf_txt">
+                    안녕하세요! 저는 제가 직접 작성한 코드가 그림처럼 그려지는 것에
+                    흥미를 느껴서 꿈을 가지게 되었습니다. 아직 부족한 부분도 있지만
+                    적극적으로 배우고 끈질기게 도전하여 하루하루 발전하는 <b>웹 퍼블리셔</b>가 되겠습니다.
+                </p>
 
-                        <article class="skills onScroll inUp">
-                            <h3>About Me</h3>
-                            <ul class="skill_list">
-                                <li>
-                                    <h4>HTML</h4>
-                                    <ul>
-                                        <li>웹 접근성 고려</li>
-                                        <li>시멘틱 마크업</li>
-                                        <li>크로스 브라우징</li>
-                                    </ul>
-                                </li>
+                <div class="panel">
+                    <div class="front card">
+                        <p>HTML</p>
+                    </div>
 
-                                <li>
-                                    <h4>CSS</h4>
-                                    <ul>
-                                        <li>미디어쿼리, 반응형작업</li>
-                                        <li>부트스트랩</li>
-                                        <li>트랜지션, 애니메이션 활용</li>
-                                    </ul>
-                                </li>
+                    <div class="back card">
+                        <ul>
+                            <li>웹 접근성 고려</li>
+                            <li>시멘틱 마크업</li>
+                            <li>크로스 브라우징</li>
+                        </ul>
+                    </div>
+                </div>
 
-                                <li>
-                                    <h4>JS</h4>
-                                    <ul>
-                                        <li>자바스크립트 / 제이쿼리</li>
-                                        <li>제이쿼리 UI 플로그인 활용</li>
-                                        <li>동적 코드 작성</li>
-                                    </ul>
-                                </li>
+                <div class="panel">
+                    <div class="front card">
+                        <p>CSS</p>
+                    </div>
 
-                                <li>
-                                    <h4>ETC</h4>
-                                    <ul>
-                                        <li>Excel</li>
-                                        <li>Word</li>
-                                        <li>Power Point</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </article>
+                    <div class="back card">
+                        <ul>
+                            <li>미디어쿼리&반응형</li>
+                            <li>부트스트랩</li>
+                            <li>트랜지션&애니메이션</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="front card">
+                        <p>JS</p>
+                    </div>
+
+                    <div class="back card">
+                        <ul>
+                            <li>자바스크립트 / 제이쿼리</li>
+                            <li>제이쿼리 UI 플로그인 활용</li>
+                            <li>동적 코드 작성</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
             <!-- skill -->
             <section id="skill">
-                <div class="inner">
-                    <h2 class="category-title">SKILL</h2>
-                    <ul class="c_list onScroll inUp">
-                        <li class="skill1">
-                            <span class="chart" data-percent="95">
-                                <span class="percent">95</span>
-                            </span>
-                            <span class="txt">HTML</span>
+                <h2 class="category-title">SKILL</h2>
+
+                <div class="skillview">
+                    <ul class="skills">
+                        <li><img src="./image/html.png" alt="" title="HTML"></li>
+                        <li><img src="./image/css.png" alt="" title="CSS"></li>
+                        <li><img src="./image/js.png" alt="" title="JAVASCRIPT"></li>
+                        <li><img src="./image/jq.png" alt="" title="JQUERY"></li>
+                    </ul>
+                </div>
+
+                <div class="boxskill">
+                    <ul class="s_list">
+                        <li class="s_li">
+                            <img src="./image/html.png" alt="" title="HTML">
+
+                            <div class="skilloption">
+                                <span class="skillname">HTML</span>
+
+                                <div class="percent">
+                                    <div class="progress on" style="width:95%;"></div>
+                                </div>
+                                <span class="value">95%</span>
+                            </div>
                         </li>
 
-                        <li class="skill2">
-                            <span class="chart" data-percent="95">
-                                <span class="percent">95</span>
-                            </span>
-                            <span class="txt">CSS</span>
+                        <li class="s_li">
+                            <img src="./image/css.png" alt="" title="CSS">
+
+                            <div class="skilloption">
+                                <span class="skillname">CSS</span>
+
+                                <div class="percent">
+                                    <div class="progress on" style="width:95%;"></div>
+                                </div>
+                                <span class="value">95%</span>
+                            </div>
                         </li>
 
-                        <li class="skill3">
-                            <span class="chart" data-percent="88">
-                                <span class="percent">88</span>
-                            </span>
-                            <span class="txt">JAVASCRIPT</span>
+                        <li class="s_li">
+                            <img src="./image/js.png" alt="" title="JAVASCRIPT">
+
+                            <div class="skilloption">
+                                <span class="skillname">JS</span>
+
+                                <div class="percent">
+                                    <div class="progress on" style="width:80%;"></div>
+                                </div>
+                                <span class="value">80%</span>
+                            </div>
                         </li>
 
-                        <li class="skill4">
-                            <span class="chart" data-percent="90">
-                                <span class="percent">90</span>
-                            </span>
-                            <span class="txt">JQUERY</span>
+                         <li class="s_li">
+                            <img src="./image/jq.png" alt="" title="JQUERY">
+
+                            <div class="skilloption">
+                                <span class="skillname">JQUERY</span>
+
+                                <div class="percent">
+                                    <div class="progress on" style="width:85%;"></div>
+                                </div>
+                                <span class="value">85%</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -168,113 +200,87 @@
 
             <!-- project -->
             <section id="project">
-                <div class="inner">
-                    <h2 class="category-title">PROJECT</h2>
-
-                    <div class="pj_component">
-                        <figure class="project_box">
-                            <a class="pj_thumbnail" href="http://chick98s.github.io/git_cy/ry_hp.html" target="_blank">
-                                <!-- hover시 보여줄 부분 -->
-                                <div class="hv_caption">
-                                    <span class="caption">
-                                        &#8599; 페이지로 가기
-                                    </span>
-                                </div>
-                                <img class="project_img" src="./image/cyworld_img.png" alt="싸이월드_페이지">
+                <h2 class="category-title">PROJECT</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="https://chick98s.github.io/git_portfolio/portfolio.html" target="_blank">
+                                <img class="project_img" src="./image/pf_img.png" alt="포트폴리오 사이트">
                             </a>
-                        </figure>
 
-                        <div class="pj_content">
-                            <h3>싸이월드</h3>
-                            <ul>
-                                <li>사용언어: css, jquery</li>
-                                <li>설명: 싸이월드 디자인을 참고하여 제작하였습니다.</li>
-                            </ul>
+                            <span>포트폴리오 사이트</span>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="https://chick98s.github.io/git_music/song.html" target="_blank">
+                                <img class="project_img" src="./image/song_img.png" alt="뮤직 사이트">
+                            </a>
+
+                            <span>뮤직 사이트</span>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://chick98s.github.io/git_cafe/cafe.html" target="_blank">
+                                <img class="project_img" src="./image/cafe_img.png" alt="카페 사이트">
+
+                                <span>카페 사이트</span>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://chick98s.github.io/git_cy/ry_hp.html" target="_blank">
+                                <img class="project_img" src="./image/cyworld_img.png" alt="싸이월드 사이트">
+                            </a>
+
+                            <span>싸이월드 사이트</span>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="http://chick98s.github.io/git_cy/ry_hp.html" target="_blank">
+                                <img class="project_img" src="./image/movie_img.png" alt="넷플릭스 사이트">
+                            </a>
+
+                            <span>넷플릭스 사이트</span>
                         </div>
                     </div>
-
-                    <div class="pj_component">
-                        <figure class="project_box">
-                            <a class="pj_thumbnail" href="https://chick98s.github.io/git_music/song.html"
-                                target="_blank">
-                                <!-- hover시 보여줄 부분 -->
-                                <div class="hv_caption">
-                                    <span class="caption">
-                                        &#8599; 페이지로 가기
-                                    </span>
-                                </div>
-                                <img class="project_img" src="./image/song_img.png" alt="뮤직_페이지">
-                            </a>
-                        </figure>
-
-                        <div class="pj_content">
-                            <h3>MUSIC</h3>
-                            <ul>
-                                <li>사용언어: css, jquery</li>
-                                <li>설명: 반응형 Music 페이지를 제작하였습니다.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pj_component">
-                        <figure class="project_box">
-                            <a class="pj_thumbnail" href="http://chick98s.github.io/git_cafe/cafe.html" target="_blank">
-                                <!-- hover시 보여줄 부분 -->
-                                <div class="hv_caption">
-                                    <span class="caption">
-                                        &#8599; 페이지로 가기
-                                    </span>
-                                </div>
-                                <img class="project_img" src="./image/cafe_img.png" alt="카페_페이지">
-                            </a>
-                        </figure>
-
-                        <div class="pj_content">
-                            <h3>CAFE</h3>
-                            <ul>
-                                <li>사용언어: css, jquery</li>
-                                <li>설명: CAFE 페이지를 제작하였습니다.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pj_component">
-                        <figure class="project_box">
-                            <a class="pj_thumbnail" href="https://chick98s.github.io/git_portfolio/portfolio.html"
-                                target="_blank">
-                                <!-- hover시 보여줄 부분 -->
-                                <div class="hv_caption">
-                                    <span class="caption">
-                                        &#8599; 페이지로 가기
-                                    </span>
-                                </div>
-                                <img class="project_img" src="./image/pf_img.png" alt="포트폴리오_페이지">
-                            </a>
-                        </figure>
-
-                        <div class="pj_content">
-                            <h3>포트폴리오</h3>
-                            <ul>
-                                <li>사용언어: css, javascript, jquery</li>
-                                <li>설명: 포트폴리오 페이지를 제작하였습니다.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </section>
         </main>
 
         <!-- footer -->
         <footer id="footer">
-            <p>개인 포트폴리오용으로 제작되었습니다.</p>
-            <p>&#169; 2023 CHOI SOYEON. All Rihths Reserved.</p>
+            <p>
+                개인 포트폴리오용으로 제작되었습니다.<br>
+                &#169; 2023 CHOI SOYEON. All Rihths Reserved.
+            </p>
         </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
-
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./js/portfolio.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
 </body>
 
 </html>
