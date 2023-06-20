@@ -9,6 +9,8 @@ const items = document.querySelectorAll(".item");
 const content = "PortFolio\u00A0";
 const text = document.querySelector(".typing");
 
+const menuTrigger = document.querySelector(".nav_toggle");
+
 let i = 0;
 html.style.overflow = "hidden"; //로딩중 스크롤 방지
 
@@ -63,13 +65,14 @@ Array.prototype.forEach.call(items, function (elem) {
 });
 
 //토글메뉴
-function tgMenu() {
-  let tgmenu = document.querySelector(".nav_toggle");
-  tgmenu.classList.toggle("active");
-
-  let menu = document.querySelector(".nav");
-  menu.classList.toggle("active");
+const button=()=> {
+  const burger = document.querySelector('.nav_toggle');
+  burger.addEventListener('click', ()=> {
+    burger.classList.toggle('toggle');
+  });
 }
+
+button();
 
 $(function () {
   //헤더 스크롤 이벤트
@@ -87,6 +90,16 @@ $(function () {
       $("#header").css("top", "0px"); // 스크롤을 올렸을때 #header의 CSS 속성중 top 값을 0px로 변경한다.
     }
     lastScrollTop = st;
+  });
+
+  //햄버거 버튼
+  $('.nav_toggle').click(function(){
+    if($(".nav").css("display") == "none"){
+      $(".nav").show();
+    }
+    else {
+      $(".nav").hide();
+    }
   });
 
   //skill 버튼
