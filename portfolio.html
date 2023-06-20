@@ -28,22 +28,20 @@
 
     <div id="wrap">
         <header id="header">
+            <!-- 토글 버튼 -->
+            <div class="nav_toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
             <!-- nav -->
-            <nav class="nav" onclick="tgMenu();">
+            <nav class="nav">
                 <a href="#home" class="item is-active">HOME</a>
                 <a href="#profile" class="item">PROFILE</a>
                 <a href="#skill" class="item">SKILLS</a>
                 <a href="#project" class="item">PROJECT</a>
             </nav>
-
-            <!-- 토글 버튼 -->
-            <button class="nav_toggle" onclick="tgMenu();">
-                <span class="nav_icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </button>
         </header>
 
         <main id="main">
@@ -52,7 +50,7 @@
                 <div class="intro">
                     <p class="intro_text">WELCOME TO MY<br>
                         <span class="typing"></span><br>
-                        <span style="font-size: 2rem; font-family: gordic, sans-serif;">
+                        <span class="my_txt">
                             안녕하세요! 웹 퍼블리셔를 꿈꾸는 최소연입니다.
                         </span>
                     </p>
@@ -73,55 +71,50 @@
             <!--PROFILE-->
             <section id="profile">
                 <h2 class="category-title">PROFILE</h2>
-                <div class="img_box">
-                    <img class="pf_img" src="./image/sy.jpg" alt="프로필_이미지">
-                </div>
 
-                <p class="pf_txt">
-                    안녕하세요! 저는 제가 직접 작성한 코드가 그림처럼 그려지는 것에
-                    흥미를 느껴서 꿈을 가지게 되었습니다. 아직 부족한 부분도 있지만
-                    적극적으로 배우고 끈질기게 도전하여 하루하루 발전하는 <b>웹 퍼블리셔</b>가 되겠습니다.
-                </p>
+                <div class="img_box"></div>
 
-                <div class="panel">
-                    <div class="front card">
-                        <p>HTML</p>
+                <div class="card_wrap">
+                    <div class="panel">
+                        <div class="front card">
+                            <p>HTML</p>
+                        </div>
+                
+                        <div class="back card">
+                            <ul>
+                                <li>웹 접근성 고려</li>
+                                <li>시멘틱 마크업</li>
+                                <li>크로스 브라우징</li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="back card">
-                        <ul>
-                            <li>웹 접근성 고려</li>
-                            <li>시멘틱 마크업</li>
-                            <li>크로스 브라우징</li>
-                        </ul>
+                
+                    <div class="panel">
+                        <div class="front card">
+                            <p>CSS</p>
+                        </div>
+                
+                        <div class="back card">
+                            <ul>
+                                <li>미디어쿼리&반응형</li>
+                                <li>부트스트랩</li>
+                                <li>트랜지션&애니메이션</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
-                <div class="panel">
-                    <div class="front card">
-                        <p>CSS</p>
-                    </div>
-
-                    <div class="back card">
-                        <ul>
-                            <li>미디어쿼리&반응형</li>
-                            <li>부트스트랩</li>
-                            <li>트랜지션&애니메이션</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <div class="front card">
-                        <p>JS</p>
-                    </div>
-
-                    <div class="back card">
-                        <ul>
-                            <li>자바스크립트 / 제이쿼리</li>
-                            <li>제이쿼리 UI 플로그인 활용</li>
-                            <li>동적 코드 작성</li>
-                        </ul>
+                
+                    <div class="panel">
+                        <div class="front card">
+                            <p>JS</p>
+                        </div>
+                
+                        <div class="back card">
+                            <ul>
+                                <li>자바스크립트 / 제이쿼리</li>
+                                <li>제이쿼리 UI 플로그인 활용</li>
+                                <li>동적 코드 작성</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
